@@ -1,0 +1,2461 @@
+# callgrind format
+version: 1
+creator: xtree-1
+pid: 20803
+cmd: ./target/debug/example_memcheck
+
+positions: line
+event: curB : currently allocated Bytes
+event: curBk : currently allocated Blocks
+event: totB : total allocated Bytes
+event: totBk : total allocated Blocks
+event: totFdB : total Freed Bytes
+event: totFdBk : total Freed Blocks
+events: curB  curBk  totB  totBk  totFdB  totFdBk 
+fl=(1) UnknownFile???
+fn=(1) main
+0
+cfi=(2) /rustc/6afcb5628523b0baae5704ad34ac1aba8ba10de6/src/libstd/rt.rs
+cfn=(2) std::rt::lang_start
+calls=0 64
+0 0 0 552 1 0 0
+fl=(2)
+fn=(2)
+64
+cfi=(3) /rustc/6afcb5628523b0baae5704ad34ac1aba8ba10de6//src/libstd/sys/unix/thread.rs
+cfn=(3) std::rt::lang_start_internal
+calls=0 261
+64 0 0 552 1 0 0
+fl=(3)
+fn=(3)
+261
+cfi=(4) /build/glibc-OTsEL5/glibc-2.27/nptl/pthread_getattr_np.c
+cfn=(4) pthread_getattr_np
+calls=0 81
+261 0 0 552 1 0 0
+fl=(4)
+fn=(4)
+81
+cfi=(5) /build/glibc-OTsEL5/glibc-2.27/libio/iofopen.c
+cfn=(5) fopen@@GLIBC_2.2.5
+calls=0 65
+81 0 0 552 1 0 0
+fl=(5)
+fn=(5)
+65 0 0 552 1 0 0
+
+fl=(1)
+fn=(1)
+0
+cfi=(2)
+cfn=(2)
+calls=0 64
+0 0 0 120 1 0 0
+fl=(2)
+fn=(2)
+64
+cfi=(3)
+cfn=(3)
+calls=0 261
+64 0 0 120 1 0 0
+fl=(3)
+fn=(3)
+261
+cfi=(4)
+cfn=(4)
+calls=0 118
+261 0 0 120 1 0 0
+fl=(4)
+fn=(4)
+118
+cfi=(6) /build/glibc-OTsEL5/glibc-2.27/libio/iogetdelim.c
+cfn=(6) getdelim
+calls=0 62
+118 0 0 120 1 0 0
+fl=(6)
+fn=(6)
+62 0 0 120 1 0 0
+
+fl=(1)
+fn=(1)
+0
+cfi=(2)
+cfn=(2)
+calls=0 64
+0 0 0 1024 1 0 0
+fl=(2)
+fn=(2)
+64
+cfi=(3)
+cfn=(3)
+calls=0 261
+64 0 0 1024 1 0 0
+fl=(3)
+fn=(3)
+261
+cfi=(4)
+cfn=(4)
+calls=0 118
+261 0 0 1024 1 0 0
+fl=(4)
+fn=(4)
+118
+cfi=(6)
+cfn=(6)
+calls=0 73
+118 0 0 1024 1 0 0
+fl=(6)
+fn=(6)
+73
+cfi=(7) /build/glibc-OTsEL5/glibc-2.27/libio/fileops.c
+cfn=(7) _IO_file_underflow@@GLIBC_2.2.5
+calls=0 495
+73 0 0 1024 1 0 0
+fl=(7)
+fn=(7)
+495
+cfi=(8) /build/glibc-OTsEL5/glibc-2.27/libio/genops.c
+cfn=(8) _IO_doallocbuf
+calls=0 365
+495 0 0 1024 1 0 0
+fl=(8)
+fn=(8)
+365
+cfi=(9) /build/glibc-OTsEL5/glibc-2.27/libio/filedoalloc.c
+cfn=(9) _IO_file_doallocate
+calls=0 101
+365 0 0 1024 1 0 0
+fl=(9)
+fn=(9)
+101 0 0 1024 1 0 0
+
+fl=(1)
+fn=(1)
+0
+cfi=(2)
+cfn=(2)
+calls=0 64
+0 0 0 240 1 120 1
+fl=(2)
+fn=(2)
+64
+cfi=(3)
+cfn=(3)
+calls=0 261
+64 0 0 240 1 120 1
+fl=(3)
+fn=(3)
+261
+cfi=(4)
+cfn=(4)
+calls=0 118
+261 0 0 240 1 120 1
+fl=(4)
+fn=(4)
+118
+cfi=(6)
+cfn=(6)
+calls=0 102
+118 0 0 240 1 120 1
+fl=(6)
+fn=(6)
+102 0 0 240 1 120 1
+
+fl=(1)
+fn=(1)
+0
+cfi=(2)
+cfn=(2)
+calls=0 64
+0 0 0 0 0 240 1
+fl=(2)
+fn=(2)
+64
+cfi=(3)
+cfn=(3)
+calls=0 261
+64 0 0 0 0 240 1
+fl=(3)
+fn=(3)
+261
+cfi=(4)
+cfn=(4)
+calls=0 158
+261 0 0 0 0 240 1
+fl=(4)
+fn=(4)
+158 0 0 0 0 240 1
+
+fl=(1)
+fn=(1)
+0
+cfi=(2)
+cfn=(2)
+calls=0 64
+0 0 0 0 0 1024 1
+fl=(2)
+fn=(2)
+64
+cfi=(3)
+cfn=(3)
+calls=0 261
+64 0 0 0 0 1024 1
+fl=(3)
+fn=(3)
+261
+cfi=(4)
+cfn=(4)
+calls=0 161
+261 0 0 0 0 1024 1
+fl=(4)
+fn=(4)
+161
+cfi=(10) /build/glibc-OTsEL5/glibc-2.27/libio/iofclose.c
+cfn=(10) fclose@@GLIBC_2.2.5
+calls=0 53
+161 0 0 0 0 1024 1
+fl=(10)
+fn=(10)
+53
+cfi=(7)
+cfn=(11) _IO_file_close_it@@GLIBC_2.2.5
+calls=0 154
+53 0 0 0 0 1024 1
+fl=(7)
+fn=(11)
+154
+cfi=(8)
+cfn=(12) _IO_setb
+calls=0 349
+154 0 0 0 0 1024 1
+fl=(8)
+fn=(12)
+349 0 0 0 0 1024 1
+
+fl=(1)
+fn=(1)
+0
+cfi=(2)
+cfn=(2)
+calls=0 64
+0 0 0 0 0 552 1
+fl=(2)
+fn=(2)
+64
+cfi=(3)
+cfn=(3)
+calls=0 261
+64 0 0 0 0 552 1
+fl=(3)
+fn=(3)
+261
+cfi=(4)
+cfn=(4)
+calls=0 161
+261 0 0 0 0 552 1
+fl=(4)
+fn=(4)
+161
+cfi=(10)
+cfn=(10)
+calls=0 77
+161 0 0 0 0 552 1
+fl=(10)
+fn=(10)
+77 0 0 0 0 552 1
+
+fl=(1)
+fn=(1)
+0
+cfi=(2)
+cfn=(2)
+calls=0 64
+0 0 0 32 1 0 0
+fl=(2)
+fn=(2)
+64
+cfi=(3)
+cfn=(3)
+calls=0 261
+64 0 0 32 1 0 0
+fl=(3)
+fn=(3)
+261
+cfi=(4)
+cfn=(4)
+calls=0 176
+261 0 0 32 1 0 0
+fl=(4)
+fn=(4)
+176
+cfi=(1)
+cfn=(13) realloc
+calls=0 0
+176 0 0 32 1 0 0
+fl=(1)
+fn=(13)
+0 0 0 32 1 0 0
+
+fl=(1)
+fn=(1)
+0
+cfi=(2)
+cfn=(2)
+calls=0 64
+0 0 0 0 0 32 1
+fl=(2)
+fn=(2)
+64
+cfi=(3)
+cfn=(3)
+calls=0 269
+64 0 0 0 0 32 1
+fl=(3)
+fn=(3)
+269
+cfi=(11) /build/glibc-OTsEL5/glibc-2.27/nptl/pthread_attr_destroy.c
+cfn=(14) pthread_attr_destroy
+calls=0 38
+269 0 0 0 0 32 1
+fl=(11)
+fn=(14)
+38 0 0 0 0 32 1
+
+fl=(1)
+fn=(1)
+0
+cfi=(2)
+cfn=(2)
+calls=0 64
+0 0 0 4 1 0 0
+fl=(2)
+fn=(2)
+64
+cfi=(12) /rustc/6afcb5628523b0baae5704ad34ac1aba8ba10de6/src/liballoc/alloc.rs
+cfn=(3)
+calls=0 75
+64 0 0 4 1 0 0
+fl=(12)
+fn=(3)
+75 0 0 4 1 0 0
+
+fl=(1)
+fn=(1)
+0
+cfi=(2)
+cfn=(2)
+calls=0 64
+0 0 0 5 1 4 1
+fl=(2)
+fn=(2)
+64
+cfi=(13) /rustc/6afcb5628523b0baae5704ad34ac1aba8ba10de6//src/libstd/rt.rs
+cfn=(3)
+calls=0 40
+64 0 0 5 1 4 1
+fl=(13)
+fn=(3)
+40
+cfi=(14) /rustc/6afcb5628523b0baae5704ad34ac1aba8ba10de6//src/libstd/ffi/c_str.rs
+cfn=(15) std::thread::Thread::new
+calls=0 330
+40 0 0 5 1 4 1
+fl=(14)
+fn=(15)
+330
+cfi=(12)
+cfn=(16) std::ffi::c_str::CString::from_vec_unchecked
+calls=0 111
+330 0 0 5 1 4 1
+fl=(12)
+fn=(16)
+111 0 0 5 1 4 1
+
+fl=(1)
+fn=(1)
+0
+cfi=(2)
+cfn=(2)
+calls=0 64
+0 0 0 40 1 0 0
+fl=(2)
+fn=(2)
+64
+cfi=(13)
+cfn=(3)
+calls=0 40
+64 0 0 40 1 0 0
+fl=(13)
+fn=(3)
+40
+cfi=(12)
+cfn=(15)
+calls=0 75
+40 0 0 40 1 0 0
+fl=(12)
+fn=(15)
+75 0 0 40 1 0 0
+
+fl=(1)
+fn=(1)
+0
+cfi=(2)
+cfn=(2)
+calls=0 64
+0 0 0 48 1 0 0
+fl=(2)
+fn=(2)
+64
+cfi=(13)
+cfn=(3)
+calls=0 40
+64 0 0 48 1 0 0
+fl=(13)
+fn=(3)
+40
+cfi=(12)
+cfn=(15)
+calls=0 75
+40 0 0 48 1 0 0
+fl=(12)
+fn=(15)
+75 0 0 48 1 0 0
+
+fl=(1)
+fn=(1)
+0
+cfi=(2)
+cfn=(2)
+calls=0 64
+0 0 0 80 1 0 0
+fl=(2)
+fn=(2)
+64
+cfi=(13)
+cfn=(3)
+calls=0 40
+64 0 0 80 1 0 0
+fl=(13)
+fn=(3)
+40
+cfi=(12)
+cfn=(15)
+calls=0 75
+40 0 0 80 1 0 0
+fl=(12)
+fn=(15)
+75 0 0 80 1 0 0
+
+fl=(1)
+fn=(1)
+0
+cfi=(2)
+cfn=(2)
+calls=0 64
+0 0 0 32 1 0 0
+fl=(2)
+fn=(2)
+64
+cfi=(13)
+cfn=(3)
+calls=0 41
+64 0 0 32 1 0 0
+fl=(13)
+fn=(3)
+41
+cfi=(15) /rustc/6afcb5628523b0baae5704ad34ac1aba8ba10de6//src/libstd/sys/unix/fast_thread_local.rs
+cfn=(17) std::sys_common::thread_info::set
+calls=0 28
+41 0 0 32 1 0 0
+fl=(15)
+fn=(17)
+28
+cfi=(16) /build/glibc-OTsEL5/glibc-2.27/stdlib/cxa_thread_atexit_impl.c
+cfn=(18) __cxa_thread_atexit_impl
+calls=0 106
+28 0 0 32 1 0 0
+fl=(16)
+fn=(18)
+106 0 0 32 1 0 0
+
+fl=(17) /rustc/6afcb5628523b0baae5704ad34ac1aba8ba10de6//src/libstd/panicking.rs
+fn=(3)
+272
+cfi=(18) /rustc/6afcb5628523b0baae5704ad34ac1aba8ba10de6//src/libpanic_unwind/lib.rs
+cfn=(19) __rust_maybe_catch_panic
+calls=0 85
+272 0 0 30720 15 0 0
+fl=(18)
+fn=(19)
+85
+cfi=(13)
+cfn=(20) std::panicking::try::do_call
+calls=0 49
+85 0 0 30720 15 0 0
+fl=(13)
+fn=(20)
+49
+cfi=(2)
+cfn=(21) std::rt::lang_start::{{closure}}
+calls=0 64
+49 0 0 30720 15 0 0
+fl=(2)
+fn=(21)
+64
+cfi=(19) /home/martina/prezentacia/performance_meetup/performance_meetup/src/example_memcheck/main.rs
+cfn=(22) example_memcheck::main
+calls=0 104
+64 0 0 30720 15 0 0
+fl=(19)
+fn=(22)
+104
+cfi=(19)
+cfn=(23) example_memcheck::allocate
+calls=0 3
+104 0 0 30720 15 0 0
+fl=(19)
+fn=(23)
+3
+cfi=(20) /rustc/6afcb5628523b0baae5704ad34ac1aba8ba10de6/src/liballoc/vec.rs
+cfn=(24) alloc::vec::Vec<T>::with_capacity
+calls=0 355
+3 0 0 30720 15 0 0
+fl=(20)
+fn=(24)
+355
+cfi=(21) /rustc/6afcb5628523b0baae5704ad34ac1aba8ba10de6/src/liballoc/raw_vec.rs
+cfn=(25) alloc::raw_vec::RawVec<T>::with_capacity
+calls=0 139
+355 0 0 30720 15 0 0
+fl=(21)
+fn=(25)
+139
+cfi=(21)
+cfn=(26) alloc::raw_vec::RawVec<T,A>::allocate_in
+calls=0 95
+139 0 0 30720 15 0 0
+fl=(21)
+fn=(26)
+95
+cfi=(12)
+cfn=(27) <alloc::alloc::Global as core::alloc::Alloc>::alloc
+calls=0 151
+95 0 0 30720 15 0 0
+fl=(12)
+fn=(27)
+151
+cfi=(12)
+cfn=(28) alloc::alloc::alloc
+calls=0 75
+151 0 0 30720 15 0 0
+fl=(12)
+fn=(28)
+75 0 0 30720 15 0 0
+
+fl=(18)
+fn=(19)
+85
+cfi=(13)
+cfn=(20)
+calls=0 49
+85 245760 15 430080 45 215040 45
+fl=(13)
+fn=(20)
+49
+cfi=(2)
+cfn=(21)
+calls=0 64
+49 245760 15 430080 45 215040 45
+fl=(2)
+fn=(21)
+64
+cfi=(19)
+cfn=(22)
+calls=0 104
+64 245760 15 430080 45 215040 45
+fl=(19)
+fn=(22)
+104
+cfi=(19)
+cfn=(23)
+calls=0 5
+104 245760 15 430080 45 215040 45
+fl=(19)
+fn=(23)
+5
+cfi=(20)
+cfn=(29) alloc::vec::Vec<T>::push
+calls=0 1033
+5 245760 15 430080 45 215040 45
+fl=(20)
+fn=(29)
+1033
+cfi=(20)
+cfn=(30) alloc::vec::Vec<T>::reserve
+calls=0 457
+1033 245760 15 430080 45 215040 45
+fl=(20)
+fn=(30)
+457
+cfi=(21)
+cfn=(31) alloc::raw_vec::RawVec<T,A>::reserve
+calls=0 491
+457 245760 15 430080 45 215040 45
+fl=(21)
+fn=(31)
+491
+cfi=(21)
+cfn=(32) alloc::raw_vec::RawVec<T,A>::reserve_internal
+calls=0 666
+491 245760 15 430080 45 215040 45
+fl=(21)
+fn=(32)
+666
+cfi=(12)
+cfn=(33) <alloc::alloc::Global as core::alloc::Alloc>::realloc
+calls=0 166
+666 245760 15 430080 45 215040 45
+fl=(12)
+fn=(33)
+166
+cfi=(12)
+cfn=(34) alloc::alloc::realloc
+calls=0 111
+166 245760 15 430080 45 215040 45
+fl=(12)
+fn=(34)
+111 245760 15 430080 45 215040 45
+
+fl=(19)
+fn=(35) example_memcheck::double_free
+14
+cfi=(22) /rustc/6afcb5628523b0baae5704ad34ac1aba8ba10de6/src/liballoc/string.rs
+cfn=(36) <alloc::string::String as core::convert::From<&str>>::from
+calls=0 2188
+14 5 1 5 1 0 0
+fl=(22)
+fn=(36)
+2188
+cfi=(23) /rustc/6afcb5628523b0baae5704ad34ac1aba8ba10de6/src/liballoc/str.rs
+cfn=(37) alloc::str::<impl alloc::borrow::ToOwned for str>::to_owned
+calls=0 206
+2188 5 1 5 1 0 0
+fl=(23)
+fn=(37)
+206
+cfi=(24) /rustc/6afcb5628523b0baae5704ad34ac1aba8ba10de6/src/liballoc/slice.rs
+cfn=(38) alloc::slice::<impl alloc::borrow::ToOwned for [T]>::to_owned
+calls=0 648
+206 5 1 5 1 0 0
+fl=(24)
+fn=(38)
+648
+cfi=(24)
+cfn=(39) alloc::slice::<impl [T]>::to_vec
+calls=0 380
+648 5 1 5 1 0 0
+fl=(24)
+fn=(39)
+380
+cfi=(24)
+cfn=(40) alloc::slice::hack::to_vec
+calls=0 159
+380 5 1 5 1 0 0
+fl=(24)
+fn=(40)
+159
+cfi=(20)
+cfn=(24)
+calls=0 355
+159 5 1 5 1 0 0
+fl=(20)
+fn=(24)
+355
+cfi=(21)
+cfn=(25)
+calls=0 139
+355 5 1 5 1 0 0
+fl=(21)
+fn=(25)
+139
+cfi=(21)
+cfn=(26)
+calls=0 95
+139 5 1 5 1 0 0
+fl=(21)
+fn=(26)
+95
+cfi=(12)
+cfn=(27)
+calls=0 151
+95 5 1 5 1 0 0
+fl=(12)
+fn=(27)
+151
+cfi=(12)
+cfn=(28)
+calls=0 75
+151 5 1 5 1 0 0
+fl=(12)
+fn=(28)
+75 5 1 5 1 0 0
+
+fl=(1)
+fn=(1)
+0
+cfi=(2)
+cfn=(2)
+calls=0 64
+0 0 0 24 1 0 0
+fl=(2)
+fn=(2)
+64
+cfi=(17)
+cfn=(3)
+calls=0 272
+64 0 0 24 1 0 0
+fl=(17)
+fn=(3)
+272
+cfi=(18)
+cfn=(19)
+calls=0 85
+272 0 0 24 1 0 0
+fl=(18)
+fn=(19)
+85
+cfi=(13)
+cfn=(20)
+calls=0 49
+85 0 0 24 1 0 0
+fl=(13)
+fn=(20)
+49
+cfi=(2)
+cfn=(21)
+calls=0 64
+49 0 0 24 1 0 0
+fl=(2)
+fn=(21)
+64
+cfi=(19)
+cfn=(22)
+calls=0 106
+64 0 0 24 1 0 0
+fl=(19)
+fn=(22)
+106
+cfi=(25) /rustc/6afcb5628523b0baae5704ad34ac1aba8ba10de6/src/liballoc/boxed.rs
+cfn=(35)
+calls=0 113
+106 0 0 24 1 0 0
+fl=(25)
+fn=(35)
+113
+cfi=(12)
+cfn=(41) alloc::alloc::exchange_malloc
+calls=0 185
+113 0 0 24 1 0 0
+fl=(12)
+fn=(41)
+185
+cfi=(12)
+cfn=(28)
+calls=0 75
+185 0 0 24 1 0 0
+fl=(12)
+fn=(28)
+75 0 0 24 1 0 0
+
+fl=(22)
+fn=(42) <str as alloc::string::ToString>::to_string
+2148
+cfi=(22)
+cfn=(36)
+calls=0 2188
+2148 0 0 2 1 0 0
+fl=(22)
+fn=(36)
+2188
+cfi=(23)
+cfn=(37)
+calls=0 206
+2188 0 0 2 1 0 0
+fl=(23)
+fn=(37)
+206
+cfi=(24)
+cfn=(38)
+calls=0 648
+206 0 0 2 1 0 0
+fl=(24)
+fn=(38)
+648
+cfi=(24)
+cfn=(39)
+calls=0 380
+648 0 0 2 1 0 0
+fl=(24)
+fn=(39)
+380
+cfi=(24)
+cfn=(40)
+calls=0 159
+380 0 0 2 1 0 0
+fl=(24)
+fn=(40)
+159
+cfi=(20)
+cfn=(24)
+calls=0 355
+159 0 0 2 1 0 0
+fl=(20)
+fn=(24)
+355
+cfi=(21)
+cfn=(25)
+calls=0 139
+355 0 0 2 1 0 0
+fl=(21)
+fn=(25)
+139
+cfi=(21)
+cfn=(26)
+calls=0 95
+139 0 0 2 1 0 0
+fl=(21)
+fn=(26)
+95
+cfi=(12)
+cfn=(27)
+calls=0 151
+95 0 0 2 1 0 0
+fl=(12)
+fn=(27)
+151
+cfi=(12)
+cfn=(28)
+calls=0 75
+151 0 0 2 1 0 0
+fl=(12)
+fn=(28)
+75 0 0 2 1 0 0
+
+fl=(1)
+fn=(1)
+0
+cfi=(2)
+cfn=(2)
+calls=0 64
+0 0 0 32 1 0 0
+fl=(2)
+fn=(2)
+64
+cfi=(17)
+cfn=(3)
+calls=0 272
+64 0 0 32 1 0 0
+fl=(17)
+fn=(3)
+272
+cfi=(18)
+cfn=(19)
+calls=0 85
+272 0 0 32 1 0 0
+fl=(18)
+fn=(19)
+85
+cfi=(13)
+cfn=(20)
+calls=0 49
+85 0 0 32 1 0 0
+fl=(13)
+fn=(20)
+49
+cfi=(2)
+cfn=(21)
+calls=0 64
+49 0 0 32 1 0 0
+fl=(2)
+fn=(21)
+64
+cfi=(19)
+cfn=(22)
+calls=0 106
+64 0 0 32 1 0 0
+fl=(19)
+fn=(22)
+106
+cfi=(19)
+cfn=(35)
+calls=0 26
+106 0 0 32 1 0 0
+fl=(19)
+fn=(35)
+26
+cfi=(15)
+cfn=(43) std::io::stdio::_print
+calls=0 28
+26 0 0 32 1 0 0
+fl=(15)
+fn=(43)
+28
+cfi=(16)
+cfn=(18)
+calls=0 106
+28 0 0 32 1 0 0
+fl=(16)
+fn=(18)
+106 0 0 32 1 0 0
+
+fl=(1)
+fn=(1)
+0
+cfi=(2)
+cfn=(2)
+calls=0 64
+0 0 0 8 1 0 0
+fl=(2)
+fn=(2)
+64
+cfi=(17)
+cfn=(3)
+calls=0 272
+64 0 0 8 1 0 0
+fl=(17)
+fn=(3)
+272
+cfi=(18)
+cfn=(19)
+calls=0 85
+272 0 0 8 1 0 0
+fl=(18)
+fn=(19)
+85
+cfi=(13)
+cfn=(20)
+calls=0 49
+85 0 0 8 1 0 0
+fl=(13)
+fn=(20)
+49
+cfi=(2)
+cfn=(21)
+calls=0 64
+49 0 0 8 1 0 0
+fl=(2)
+fn=(21)
+64
+cfi=(19)
+cfn=(22)
+calls=0 106
+64 0 0 8 1 0 0
+fl=(19)
+fn=(22)
+106
+cfi=(19)
+cfn=(35)
+calls=0 26
+106 0 0 8 1 0 0
+fl=(19)
+fn=(35)
+26
+cfi=(26) /rustc/6afcb5628523b0baae5704ad34ac1aba8ba10de6//src/libstd/io/stdio.rs
+cfn=(43)
+calls=0 786
+26 0 0 8 1 0 0
+fl=(26)
+fn=(43)
+786
+cfi=(12)
+cfn=(44) std::io::stdio::stdout
+calls=0 75
+786 0 0 8 1 0 0
+fl=(12)
+fn=(44)
+75 0 0 8 1 0 0
+
+fl=(1)
+fn=(1)
+0
+cfi=(2)
+cfn=(2)
+calls=0 64
+0 0 0 24 1 0 0
+fl=(2)
+fn=(2)
+64
+cfi=(17)
+cfn=(3)
+calls=0 272
+64 0 0 24 1 0 0
+fl=(17)
+fn=(3)
+272
+cfi=(18)
+cfn=(19)
+calls=0 85
+272 0 0 24 1 0 0
+fl=(18)
+fn=(19)
+85
+cfi=(13)
+cfn=(20)
+calls=0 49
+85 0 0 24 1 0 0
+fl=(13)
+fn=(20)
+49
+cfi=(2)
+cfn=(21)
+calls=0 64
+49 0 0 24 1 0 0
+fl=(2)
+fn=(21)
+64
+cfi=(19)
+cfn=(22)
+calls=0 106
+64 0 0 24 1 0 0
+fl=(19)
+fn=(22)
+106
+cfi=(19)
+cfn=(35)
+calls=0 26
+106 0 0 24 1 0 0
+fl=(19)
+fn=(35)
+26
+cfi=(26)
+cfn=(43)
+calls=0 786
+26 0 0 24 1 0 0
+fl=(26)
+fn=(43)
+786
+cfi=(27) /rustc/6afcb5628523b0baae5704ad34ac1aba8ba10de6//src/libstd/sys_common/mod.rs
+cfn=(44)
+calls=0 123
+786 0 0 24 1 0 0
+fl=(27)
+fn=(44)
+123
+cfi=(12)
+cfn=(45) std::sys_common::at_exit_imp::push
+calls=0 75
+123 0 0 24 1 0 0
+fl=(12)
+fn=(45)
+75 0 0 24 1 0 0
+
+fl=(1)
+fn=(1)
+0
+cfi=(2)
+cfn=(2)
+calls=0 64
+0 0 0 16 1 0 0
+fl=(2)
+fn=(2)
+64
+cfi=(17)
+cfn=(3)
+calls=0 272
+64 0 0 16 1 0 0
+fl=(17)
+fn=(3)
+272
+cfi=(18)
+cfn=(19)
+calls=0 85
+272 0 0 16 1 0 0
+fl=(18)
+fn=(19)
+85
+cfi=(13)
+cfn=(20)
+calls=0 49
+85 0 0 16 1 0 0
+fl=(13)
+fn=(20)
+49
+cfi=(2)
+cfn=(21)
+calls=0 64
+49 0 0 16 1 0 0
+fl=(2)
+fn=(21)
+64
+cfi=(19)
+cfn=(22)
+calls=0 106
+64 0 0 16 1 0 0
+fl=(19)
+fn=(22)
+106
+cfi=(19)
+cfn=(35)
+calls=0 26
+106 0 0 16 1 0 0
+fl=(19)
+fn=(35)
+26
+cfi=(26)
+cfn=(43)
+calls=0 786
+26 0 0 16 1 0 0
+fl=(26)
+fn=(43)
+786
+cfi=(27)
+cfn=(44)
+calls=0 123
+786 0 0 16 1 0 0
+fl=(27)
+fn=(44)
+123
+cfi=(28) /rustc/6afcb5628523b0baae5704ad34ac1aba8ba10de6//src/libstd/sys_common/at_exit_imp.rs
+cfn=(45)
+calls=0 75
+123 0 0 16 1 0 0
+fl=(28)
+fn=(45)
+75 0 0 16 1 0 0
+
+fl=(1)
+fn=(1)
+0
+cfi=(2)
+cfn=(2)
+calls=0 64
+0 0 0 1024 1 0 0
+fl=(2)
+fn=(2)
+64
+cfi=(17)
+cfn=(3)
+calls=0 272
+64 0 0 1024 1 0 0
+fl=(17)
+fn=(3)
+272
+cfi=(18)
+cfn=(19)
+calls=0 85
+272 0 0 1024 1 0 0
+fl=(18)
+fn=(19)
+85
+cfi=(13)
+cfn=(20)
+calls=0 49
+85 0 0 1024 1 0 0
+fl=(13)
+fn=(20)
+49
+cfi=(2)
+cfn=(21)
+calls=0 64
+49 0 0 1024 1 0 0
+fl=(2)
+fn=(21)
+64
+cfi=(19)
+cfn=(22)
+calls=0 106
+64 0 0 1024 1 0 0
+fl=(19)
+fn=(22)
+106
+cfi=(19)
+cfn=(35)
+calls=0 26
+106 0 0 1024 1 0 0
+fl=(19)
+fn=(35)
+26
+cfi=(26)
+cfn=(43)
+calls=0 786
+26 0 0 1024 1 0 0
+fl=(26)
+fn=(43)
+786
+cfi=(12)
+cfn=(44)
+calls=0 75
+786 0 0 1024 1 0 0
+fl=(12)
+fn=(44)
+75 0 0 1024 1 0 0
+
+fl=(1)
+fn=(1)
+0
+cfi=(2)
+cfn=(2)
+calls=0 64
+0 0 0 40 1 0 0
+fl=(2)
+fn=(2)
+64
+cfi=(17)
+cfn=(3)
+calls=0 272
+64 0 0 40 1 0 0
+fl=(17)
+fn=(3)
+272
+cfi=(18)
+cfn=(19)
+calls=0 85
+272 0 0 40 1 0 0
+fl=(18)
+fn=(19)
+85
+cfi=(13)
+cfn=(20)
+calls=0 49
+85 0 0 40 1 0 0
+fl=(13)
+fn=(20)
+49
+cfi=(2)
+cfn=(21)
+calls=0 64
+49 0 0 40 1 0 0
+fl=(2)
+fn=(21)
+64
+cfi=(19)
+cfn=(22)
+calls=0 106
+64 0 0 40 1 0 0
+fl=(19)
+fn=(22)
+106
+cfi=(19)
+cfn=(35)
+calls=0 26
+106 0 0 40 1 0 0
+fl=(19)
+fn=(35)
+26
+cfi=(26)
+cfn=(43)
+calls=0 786
+26 0 0 40 1 0 0
+fl=(26)
+fn=(43)
+786
+cfi=(12)
+cfn=(44)
+calls=0 75
+786 0 0 40 1 0 0
+fl=(12)
+fn=(44)
+75 0 0 40 1 0 0
+
+fl=(1)
+fn=(1)
+0
+cfi=(2)
+cfn=(2)
+calls=0 64
+0 0 0 80 1 0 0
+fl=(2)
+fn=(2)
+64
+cfi=(17)
+cfn=(3)
+calls=0 272
+64 0 0 80 1 0 0
+fl=(17)
+fn=(3)
+272
+cfi=(18)
+cfn=(19)
+calls=0 85
+272 0 0 80 1 0 0
+fl=(18)
+fn=(19)
+85
+cfi=(13)
+cfn=(20)
+calls=0 49
+85 0 0 80 1 0 0
+fl=(13)
+fn=(20)
+49
+cfi=(2)
+cfn=(21)
+calls=0 64
+49 0 0 80 1 0 0
+fl=(2)
+fn=(21)
+64
+cfi=(19)
+cfn=(22)
+calls=0 106
+64 0 0 80 1 0 0
+fl=(19)
+fn=(22)
+106
+cfi=(19)
+cfn=(35)
+calls=0 26
+106 0 0 80 1 0 0
+fl=(19)
+fn=(35)
+26
+cfi=(26)
+cfn=(43)
+calls=0 786
+26 0 0 80 1 0 0
+fl=(26)
+fn=(43)
+786
+cfi=(12)
+cfn=(44)
+calls=0 75
+786 0 0 80 1 0 0
+fl=(12)
+fn=(44)
+75 0 0 80 1 0 0
+
+fl=(1)
+fn=(1)
+0
+cfi=(2)
+cfn=(2)
+calls=0 64
+0 0 0 8 1 0 0
+fl=(2)
+fn=(2)
+64
+cfi=(17)
+cfn=(3)
+calls=0 272
+64 0 0 8 1 0 0
+fl=(17)
+fn=(3)
+272
+cfi=(18)
+cfn=(19)
+calls=0 85
+272 0 0 8 1 0 0
+fl=(18)
+fn=(19)
+85
+cfi=(13)
+cfn=(20)
+calls=0 49
+85 0 0 8 1 0 0
+fl=(13)
+fn=(20)
+49
+cfi=(2)
+cfn=(21)
+calls=0 64
+49 0 0 8 1 0 0
+fl=(2)
+fn=(21)
+64
+cfi=(19)
+cfn=(22)
+calls=0 106
+64 0 0 8 1 0 0
+fl=(19)
+fn=(22)
+106
+cfi=(19)
+cfn=(35)
+calls=0 26
+106 0 0 8 1 0 0
+fl=(19)
+fn=(35)
+26
+cfi=(26)
+cfn=(43)
+calls=0 786
+26 0 0 8 1 0 0
+fl=(26)
+fn=(43)
+786
+cfi=(12)
+cfn=(44)
+calls=0 75
+786 0 0 8 1 0 0
+fl=(12)
+fn=(44)
+75 0 0 8 1 0 0
+
+fl=(2)
+fn=(21)
+64
+cfi=(19)
+cfn=(22)
+calls=0 106
+64 0 0 0 0 2 1
+fl=(19)
+fn=(22)
+106
+cfi=(19)
+cfn=(35)
+calls=0 26
+106 0 0 0 0 2 1
+fl=(19)
+fn=(35)
+26
+cfi=(29) /rustc/6afcb5628523b0baae5704ad34ac1aba8ba10de6/src/libcore/ptr.rs
+cfn=(46) core::ptr::real_drop_in_place
+calls=0 195
+26 0 0 0 0 2 1
+fl=(29)
+fn=(46)
+195
+cfi=(29)
+cfn=(46)
+calls=0 195
+195 0 0 0 0 2 1
+fl=(29)
+fn=(46)
+195
+cfi=(29)
+cfn=(46)
+calls=0 195
+195 0 0 0 0 2 1
+fl=(29)
+fn=(46)
+195
+cfi=(29)
+cfn=(46)
+calls=0 195
+195 0 0 0 0 2 1
+fl=(29)
+fn=(46)
+195
+cfi=(21)
+cfn=(47) <alloc::raw_vec::RawVec<T,A> as core::ops::drop::Drop>::drop
+calls=0 718
+195 0 0 0 0 2 1
+fl=(21)
+fn=(47)
+718
+cfi=(21)
+cfn=(48) alloc::raw_vec::RawVec<T,A>::dealloc_buffer
+calls=0 709
+718 0 0 0 0 2 1
+fl=(21)
+fn=(48)
+709
+cfi=(12)
+cfn=(49) <alloc::alloc::Global as core::alloc::Alloc>::dealloc
+calls=0 156
+709 0 0 0 0 2 1
+fl=(12)
+fn=(49)
+156
+cfi=(12)
+cfn=(50) alloc::alloc::dealloc
+calls=0 93
+156 0 0 0 0 2 1
+fl=(12)
+fn=(50)
+93 0 0 0 0 2 1
+
+fl=(1)
+fn=(1)
+0
+cfi=(2)
+cfn=(2)
+calls=0 64
+0 0 0 0 0 24 1
+fl=(2)
+fn=(2)
+64
+cfi=(17)
+cfn=(3)
+calls=0 272
+64 0 0 0 0 24 1
+fl=(17)
+fn=(3)
+272
+cfi=(18)
+cfn=(19)
+calls=0 85
+272 0 0 0 0 24 1
+fl=(18)
+fn=(19)
+85
+cfi=(13)
+cfn=(20)
+calls=0 49
+85 0 0 0 0 24 1
+fl=(13)
+fn=(20)
+49
+cfi=(2)
+cfn=(21)
+calls=0 64
+49 0 0 0 0 24 1
+fl=(2)
+fn=(21)
+64
+cfi=(19)
+cfn=(22)
+calls=0 106
+64 0 0 0 0 24 1
+fl=(19)
+fn=(22)
+106
+cfi=(19)
+cfn=(35)
+calls=0 26
+106 0 0 0 0 24 1
+fl=(19)
+fn=(35)
+26
+cfi=(29)
+cfn=(46)
+calls=0 195
+26 0 0 0 0 24 1
+fl=(29)
+fn=(46)
+195
+cfi=(12)
+cfn=(51) alloc::alloc::box_free
+calls=0 203
+195 0 0 0 0 24 1
+fl=(12)
+fn=(51)
+203
+cfi=(12)
+cfn=(50)
+calls=0 93
+203 0 0 0 0 24 1
+fl=(12)
+fn=(50)
+93 0 0 0 0 24 1
+
+fl=(1)
+fn=(1)
+0
+cfi=(2)
+cfn=(2)
+calls=0 64
+0 0 0 40 10 0 0
+fl=(2)
+fn=(2)
+64
+cfi=(17)
+cfn=(3)
+calls=0 272
+64 0 0 40 10 0 0
+fl=(17)
+fn=(3)
+272
+cfi=(18)
+cfn=(19)
+calls=0 85
+272 0 0 40 10 0 0
+fl=(18)
+fn=(19)
+85
+cfi=(13)
+cfn=(20)
+calls=0 49
+85 0 0 40 10 0 0
+fl=(13)
+fn=(20)
+49
+cfi=(2)
+cfn=(21)
+calls=0 64
+49 0 0 40 10 0 0
+fl=(2)
+fn=(21)
+64
+cfi=(19)
+cfn=(22)
+calls=0 107
+64 0 0 40 10 0 0
+fl=(19)
+fn=(22)
+107
+cfi=(25)
+cfn=(52) example_memcheck::uninitialized_var
+calls=0 113
+107 0 0 40 10 0 0
+fl=(25)
+fn=(52)
+113
+cfi=(12)
+cfn=(41)
+calls=0 185
+113 0 0 40 10 0 0
+fl=(12)
+fn=(41)
+185
+cfi=(12)
+cfn=(28)
+calls=0 75
+185 0 0 40 10 0 0
+fl=(12)
+fn=(28)
+75 0 0 40 10 0 0
+
+fl=(2)
+fn=(2)
+64
+cfi=(17)
+cfn=(3)
+calls=0 272
+64 0 0 0 0 40 10
+fl=(17)
+fn=(3)
+272
+cfi=(18)
+cfn=(19)
+calls=0 85
+272 0 0 0 0 40 10
+fl=(18)
+fn=(19)
+85
+cfi=(13)
+cfn=(20)
+calls=0 49
+85 0 0 0 0 40 10
+fl=(13)
+fn=(20)
+49
+cfi=(2)
+cfn=(21)
+calls=0 64
+49 0 0 0 0 40 10
+fl=(2)
+fn=(21)
+64
+cfi=(19)
+cfn=(22)
+calls=0 107
+64 0 0 0 0 40 10
+fl=(19)
+fn=(22)
+107
+cfi=(19)
+cfn=(52)
+calls=0 54
+107 0 0 0 0 40 10
+fl=(19)
+fn=(52)
+54
+cfi=(29)
+cfn=(46)
+calls=0 195
+54 0 0 0 0 40 10
+fl=(29)
+fn=(46)
+195
+cfi=(29)
+cfn=(46)
+calls=0 195
+195 0 0 0 0 40 10
+fl=(29)
+fn=(46)
+195
+cfi=(12)
+cfn=(51)
+calls=0 203
+195 0 0 0 0 40 10
+fl=(12)
+fn=(51)
+203
+cfi=(12)
+cfn=(50)
+calls=0 93
+203 0 0 0 0 40 10
+fl=(12)
+fn=(50)
+93 0 0 0 0 40 10
+
+fl=(18)
+fn=(19)
+85
+cfi=(13)
+cfn=(20)
+calls=0 49
+85 0 0 4 1 0 0
+fl=(13)
+fn=(20)
+49
+cfi=(2)
+cfn=(21)
+calls=0 64
+49 0 0 4 1 0 0
+fl=(2)
+fn=(21)
+64
+cfi=(19)
+cfn=(22)
+calls=0 108
+64 0 0 4 1 0 0
+fl=(19)
+fn=(22)
+108
+cfi=(19)
+cfn=(53) example_memcheck::uninitialized
+calls=0 79
+108 0 0 4 1 0 0
+fl=(19)
+fn=(53)
+79
+cfi=(20)
+cfn=(29)
+calls=0 1033
+79 0 0 4 1 0 0
+fl=(20)
+fn=(29)
+1033
+cfi=(20)
+cfn=(30)
+calls=0 457
+1033 0 0 4 1 0 0
+fl=(20)
+fn=(30)
+457
+cfi=(21)
+cfn=(31)
+calls=0 491
+457 0 0 4 1 0 0
+fl=(21)
+fn=(31)
+491
+cfi=(21)
+cfn=(32)
+calls=0 668
+491 0 0 4 1 0 0
+fl=(21)
+fn=(32)
+668
+cfi=(12)
+cfn=(27)
+calls=0 151
+668 0 0 4 1 0 0
+fl=(12)
+fn=(27)
+151
+cfi=(12)
+cfn=(28)
+calls=0 75
+151 0 0 4 1 0 0
+fl=(12)
+fn=(28)
+75 0 0 4 1 0 0
+
+fl=(18)
+fn=(19)
+85
+cfi=(13)
+cfn=(20)
+calls=0 49
+85 0 0 8 1 4 1
+fl=(13)
+fn=(20)
+49
+cfi=(2)
+cfn=(21)
+calls=0 64
+49 0 0 8 1 4 1
+fl=(2)
+fn=(21)
+64
+cfi=(19)
+cfn=(22)
+calls=0 108
+64 0 0 8 1 4 1
+fl=(19)
+fn=(22)
+108
+cfi=(19)
+cfn=(53)
+calls=0 80
+108 0 0 8 1 4 1
+fl=(19)
+fn=(53)
+80
+cfi=(20)
+cfn=(29)
+calls=0 1033
+80 0 0 8 1 4 1
+fl=(20)
+fn=(29)
+1033
+cfi=(20)
+cfn=(30)
+calls=0 457
+1033 0 0 8 1 4 1
+fl=(20)
+fn=(30)
+457
+cfi=(21)
+cfn=(31)
+calls=0 491
+457 0 0 8 1 4 1
+fl=(21)
+fn=(31)
+491
+cfi=(21)
+cfn=(32)
+calls=0 666
+491 0 0 8 1 4 1
+fl=(21)
+fn=(32)
+666
+cfi=(12)
+cfn=(33)
+calls=0 166
+666 0 0 8 1 4 1
+fl=(12)
+fn=(33)
+166
+cfi=(12)
+cfn=(34)
+calls=0 111
+166 0 0 8 1 4 1
+fl=(12)
+fn=(34)
+111 0 0 8 1 4 1
+
+fl=(18)
+fn=(19)
+85
+cfi=(13)
+cfn=(20)
+calls=0 49
+85 0 0 16 1 8 1
+fl=(13)
+fn=(20)
+49
+cfi=(2)
+cfn=(21)
+calls=0 64
+49 0 0 16 1 8 1
+fl=(2)
+fn=(21)
+64
+cfi=(19)
+cfn=(22)
+calls=0 108
+64 0 0 16 1 8 1
+fl=(19)
+fn=(22)
+108
+cfi=(19)
+cfn=(53)
+calls=0 81
+108 0 0 16 1 8 1
+fl=(19)
+fn=(53)
+81
+cfi=(20)
+cfn=(29)
+calls=0 1033
+81 0 0 16 1 8 1
+fl=(20)
+fn=(29)
+1033
+cfi=(20)
+cfn=(30)
+calls=0 457
+1033 0 0 16 1 8 1
+fl=(20)
+fn=(30)
+457
+cfi=(21)
+cfn=(31)
+calls=0 491
+457 0 0 16 1 8 1
+fl=(21)
+fn=(31)
+491
+cfi=(21)
+cfn=(32)
+calls=0 666
+491 0 0 16 1 8 1
+fl=(21)
+fn=(32)
+666
+cfi=(12)
+cfn=(33)
+calls=0 166
+666 0 0 16 1 8 1
+fl=(12)
+fn=(33)
+166
+cfi=(12)
+cfn=(34)
+calls=0 111
+166 0 0 16 1 8 1
+fl=(12)
+fn=(34)
+111 0 0 16 1 8 1
+
+fl=(13)
+fn=(20)
+49
+cfi=(2)
+cfn=(21)
+calls=0 64
+49 0 0 0 0 16 1
+fl=(2)
+fn=(21)
+64
+cfi=(19)
+cfn=(22)
+calls=0 108
+64 0 0 0 0 16 1
+fl=(19)
+fn=(22)
+108
+cfi=(19)
+cfn=(53)
+calls=0 101
+108 0 0 0 0 16 1
+fl=(19)
+fn=(53)
+101
+cfi=(29)
+cfn=(46)
+calls=0 195
+101 0 0 0 0 16 1
+fl=(29)
+fn=(46)
+195
+cfi=(29)
+cfn=(46)
+calls=0 195
+195 0 0 0 0 16 1
+fl=(29)
+fn=(46)
+195
+cfi=(29)
+cfn=(46)
+calls=0 195
+195 0 0 0 0 16 1
+fl=(29)
+fn=(46)
+195
+cfi=(21)
+cfn=(47)
+calls=0 718
+195 0 0 0 0 16 1
+fl=(21)
+fn=(47)
+718
+cfi=(21)
+cfn=(48)
+calls=0 709
+718 0 0 0 0 16 1
+fl=(21)
+fn=(48)
+709
+cfi=(12)
+cfn=(49)
+calls=0 156
+709 0 0 0 0 16 1
+fl=(12)
+fn=(49)
+156
+cfi=(12)
+cfn=(50)
+calls=0 93
+156 0 0 0 0 16 1
+fl=(12)
+fn=(50)
+93 0 0 0 0 16 1
+
+fl=(1)
+fn=(1)
+0
+cfi=(2)
+cfn=(2)
+calls=0 64
+0 0 0 0 0 40 1
+fl=(2)
+fn=(2)
+64
+cfi=(30) /rustc/6afcb5628523b0baae5704ad34ac1aba8ba10de6//src/libstd/sync/once.rs
+cfn=(3)
+calls=0 220
+64 0 0 0 0 40 1
+fl=(30)
+fn=(3)
+220
+cfi=(30)
+cfn=(54) std::sync::once::Once::call_inner
+calls=0 387
+220 0 0 0 0 40 1
+fl=(30)
+fn=(54)
+387
+cfi=(28)
+cfn=(55) std::sync::once::Once::call_once::{{closure}}
+calls=0 56
+387 0 0 0 0 40 1
+fl=(28)
+fn=(55)
+56
+cfi=(25)
+cfn=(56) <alloc::boxed::Box<F> as core::ops::function::FnOnce<A>>::call_once
+calls=0 704
+56 0 0 0 0 40 1
+fl=(25)
+fn=(56)
+704
+cfi=(31) /rustc/6afcb5628523b0baae5704ad34ac1aba8ba10de6/src/liballoc/sync.rs
+cfn=(57) core::ops::function::FnOnce::call_once{{vtable-shim}}
+calls=0 1011
+704 0 0 0 0 40 1
+fl=(31)
+fn=(57)
+1011
+cfi=(12)
+cfn=(58) alloc::sync::Arc<T>::drop_slow
+calls=0 93
+1011 0 0 0 0 40 1
+fl=(12)
+fn=(58)
+93 0 0 0 0 40 1
+
+fl=(1)
+fn=(1)
+0
+cfi=(2)
+cfn=(2)
+calls=0 64
+0 0 0 0 0 1024 1
+fl=(2)
+fn=(2)
+64
+cfi=(30)
+cfn=(3)
+calls=0 220
+64 0 0 0 0 1024 1
+fl=(30)
+fn=(3)
+220
+cfi=(30)
+cfn=(54)
+calls=0 387
+220 0 0 0 0 1024 1
+fl=(30)
+fn=(54)
+387
+cfi=(28)
+cfn=(55)
+calls=0 56
+387 0 0 0 0 1024 1
+fl=(28)
+fn=(55)
+56
+cfi=(25)
+cfn=(56)
+calls=0 704
+56 0 0 0 0 1024 1
+fl=(25)
+fn=(56)
+704
+cfi=(31)
+cfn=(57)
+calls=0 1011
+704 0 0 0 0 1024 1
+fl=(31)
+fn=(57)
+1011
+cfi=(29)
+cfn=(58)
+calls=0 195
+1011 0 0 0 0 1024 1
+fl=(29)
+fn=(58)
+195 0 0 0 0 1024 1
+
+fl=(1)
+fn=(1)
+0
+cfi=(2)
+cfn=(2)
+calls=0 64
+0 0 0 0 0 80 1
+fl=(2)
+fn=(2)
+64
+cfi=(30)
+cfn=(3)
+calls=0 220
+64 0 0 0 0 80 1
+fl=(30)
+fn=(3)
+220
+cfi=(30)
+cfn=(54)
+calls=0 387
+220 0 0 0 0 80 1
+fl=(30)
+fn=(54)
+387
+cfi=(28)
+cfn=(55)
+calls=0 56
+387 0 0 0 0 80 1
+fl=(28)
+fn=(55)
+56
+cfi=(25)
+cfn=(56)
+calls=0 704
+56 0 0 0 0 80 1
+fl=(25)
+fn=(56)
+704
+cfi=(31)
+cfn=(57)
+calls=0 1011
+704 0 0 0 0 80 1
+fl=(31)
+fn=(57)
+1011 0 0 0 0 80 1
+
+fl=(1)
+fn=(1)
+0
+cfi=(2)
+cfn=(2)
+calls=0 64
+0 0 0 0 0 8 1
+fl=(2)
+fn=(2)
+64
+cfi=(30)
+cfn=(3)
+calls=0 220
+64 0 0 0 0 8 1
+fl=(30)
+fn=(3)
+220
+cfi=(30)
+cfn=(54)
+calls=0 387
+220 0 0 0 0 8 1
+fl=(30)
+fn=(54)
+387
+cfi=(28)
+cfn=(55)
+calls=0 56
+387 0 0 0 0 8 1
+fl=(28)
+fn=(55)
+56
+cfi=(25)
+cfn=(56)
+calls=0 704
+56 0 0 0 0 8 1
+fl=(25)
+fn=(56)
+704 0 0 0 0 8 1
+
+fl=(1)
+fn=(1)
+0
+cfi=(2)
+cfn=(2)
+calls=0 64
+0 0 0 0 0 8 1
+fl=(2)
+fn=(2)
+64
+cfi=(30)
+cfn=(3)
+calls=0 220
+64 0 0 0 0 8 1
+fl=(30)
+fn=(3)
+220
+cfi=(30)
+cfn=(54)
+calls=0 387
+220 0 0 0 0 8 1
+fl=(30)
+fn=(54)
+387
+cfi=(28)
+cfn=(55)
+calls=0 56
+387 0 0 0 0 8 1
+fl=(28)
+fn=(55)
+56
+cfi=(12)
+cfn=(56)
+calls=0 93
+56 0 0 0 0 8 1
+fl=(12)
+fn=(56)
+93 0 0 0 0 8 1
+
+fl=(1)
+fn=(1)
+0
+cfi=(2)
+cfn=(2)
+calls=0 64
+0 0 0 0 0 16 1
+fl=(2)
+fn=(2)
+64
+cfi=(30)
+cfn=(3)
+calls=0 220
+64 0 0 0 0 16 1
+fl=(30)
+fn=(3)
+220
+cfi=(30)
+cfn=(54)
+calls=0 387
+220 0 0 0 0 16 1
+fl=(30)
+fn=(54)
+387
+cfi=(12)
+cfn=(55)
+calls=0 93
+387 0 0 0 0 16 1
+fl=(12)
+fn=(55)
+93 0 0 0 0 16 1
+
+fl=(1)
+fn=(1)
+0
+cfi=(2)
+cfn=(2)
+calls=0 64
+0 0 0 0 0 24 1
+fl=(2)
+fn=(2)
+64
+cfi=(30)
+cfn=(3)
+calls=0 220
+64 0 0 0 0 24 1
+fl=(30)
+fn=(3)
+220
+cfi=(30)
+cfn=(54)
+calls=0 387
+220 0 0 0 0 24 1
+fl=(30)
+fn=(54)
+387
+cfi=(12)
+cfn=(55)
+calls=0 93
+387 0 0 0 0 24 1
+fl=(12)
+fn=(55)
+93 0 0 0 0 24 1
+
+fl=(32) /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c
+fn=(59) (below main)
+344
+cfi=(33) /build/glibc-OTsEL5/glibc-2.27/stdlib/exit.c
+cfn=(60) exit
+calls=0 139
+344 0 0 0 0 64 2
+fl=(33)
+fn=(60)
+139
+cfi=(33)
+cfn=(61) __run_exit_handlers
+calls=0 46
+139 0 0 0 0 64 2
+fl=(33)
+fn=(61)
+46
+cfi=(16)
+cfn=(62) __call_tls_dtors
+calls=0 162
+46 0 0 0 0 64 2
+fl=(16)
+fn=(62)
+162 0 0 0 0 64 2
+
+fl=(32)
+fn=(59)
+344
+cfi=(33)
+cfn=(60)
+calls=0 139
+344 0 0 0 0 5 1
+fl=(33)
+fn=(60)
+139
+cfi=(33)
+cfn=(61)
+calls=0 46
+139 0 0 0 0 5 1
+fl=(33)
+fn=(61)
+46
+cfi=(16)
+cfn=(62)
+calls=0 155
+46 0 0 0 0 5 1
+fl=(16)
+fn=(62)
+155
+cfi=(31)
+cfn=(63) std::thread::local::fast::destroy_value
+calls=0 1011
+155 0 0 0 0 5 1
+fl=(31)
+fn=(63)
+1011
+cfi=(29)
+cfn=(58)
+calls=0 185
+1011 0 0 0 0 5 1
+fl=(29)
+fn=(58)
+185
+cfi=(12)
+cfn=(46)
+calls=0 93
+185 0 0 0 0 5 1
+fl=(12)
+fn=(46)
+93 0 0 0 0 5 1
+
+fl=(32)
+fn=(59)
+344
+cfi=(33)
+cfn=(60)
+calls=0 139
+344 0 0 0 0 40 1
+fl=(33)
+fn=(60)
+139
+cfi=(33)
+cfn=(61)
+calls=0 46
+139 0 0 0 0 40 1
+fl=(33)
+fn=(61)
+46
+cfi=(16)
+cfn=(62)
+calls=0 155
+46 0 0 0 0 40 1
+fl=(16)
+fn=(62)
+155
+cfi=(31)
+cfn=(63)
+calls=0 1011
+155 0 0 0 0 40 1
+fl=(31)
+fn=(63)
+1011
+cfi=(29)
+cfn=(58)
+calls=0 185
+1011 0 0 0 0 40 1
+fl=(29)
+fn=(58)
+185
+cfi=(12)
+cfn=(46)
+calls=0 93
+185 0 0 0 0 40 1
+fl=(12)
+fn=(46)
+93 0 0 0 0 40 1
+
+fl=(32)
+fn=(59)
+344
+cfi=(33)
+cfn=(60)
+calls=0 139
+344 0 0 0 0 48 1
+fl=(33)
+fn=(60)
+139
+cfi=(33)
+cfn=(61)
+calls=0 46
+139 0 0 0 0 48 1
+fl=(33)
+fn=(61)
+46
+cfi=(16)
+cfn=(62)
+calls=0 155
+46 0 0 0 0 48 1
+fl=(16)
+fn=(62)
+155
+cfi=(31)
+cfn=(63)
+calls=0 1011
+155 0 0 0 0 48 1
+fl=(31)
+fn=(63)
+1011
+cfi=(29)
+cfn=(58)
+calls=0 185
+1011 0 0 0 0 48 1
+fl=(29)
+fn=(58)
+185 0 0 0 0 48 1
+
+fl=(32)
+fn=(59)
+344
+cfi=(33)
+cfn=(60)
+calls=0 139
+344 0 0 0 0 80 1
+fl=(33)
+fn=(60)
+139
+cfi=(33)
+cfn=(61)
+calls=0 46
+139 0 0 0 0 80 1
+fl=(33)
+fn=(61)
+46
+cfi=(16)
+cfn=(62)
+calls=0 155
+46 0 0 0 0 80 1
+fl=(16)
+fn=(62)
+155
+cfi=(31)
+cfn=(63)
+calls=0 1011
+155 0 0 0 0 80 1
+fl=(31)
+fn=(63)
+1011 0 0 0 0 80 1
+
+totals: 245765 16 464308 95 218543 79

@@ -1,0 +1,1146 @@
+desc: --threshold=0.0001 --massif-out-file=src/example_massif/out_massif
+cmd: ./target/debug/example_massif
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=498042
+mem_heap_B=1816
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=detailed
+n4: 1816 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1024 0x56F418A: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x5704377: _IO_doallocbuf (genops.c:365)
+   n1: 1024 0x5703252: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:495)
+    n1: 1024 0x56F5D46: getdelim (iogetdelim.c:73)
+     n1: 1024 0x5248661: pthread_getattr_np (pthread_getattr_np.c:118)
+      n1: 1024 0x11A282: std::rt::lang_start_internal (thread.rs:267)
+       n1: 1024 0x10F607: std::rt::lang_start (rt.rs:64)
+        n0: 1024 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 552 0x56F4E48: fopen@@GLIBC_2.2.5 (iofopen.c:65)
+  n1: 552 0x52485B1: pthread_getattr_np (pthread_getattr_np.c:81)
+   n1: 552 0x11A282: std::rt::lang_start_internal (thread.rs:267)
+    n1: 552 0x10F607: std::rt::lang_start (rt.rs:64)
+     n0: 552 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 240 0x56F5BE6: getdelim (iogetdelim.c:102)
+  n1: 240 0x5248661: pthread_getattr_np (pthread_getattr_np.c:118)
+   n1: 240 0x11A282: std::rt::lang_start_internal (thread.rs:267)
+    n1: 240 0x10F607: std::rt::lang_start (rt.rs:64)
+     n0: 240 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 0 0x56F5B8A: getdelim (iogetdelim.c:62)
+  n1: 0 0x5248661: pthread_getattr_np (pthread_getattr_np.c:118)
+   n1: 0 0x11A282: std::rt::lang_start_internal (thread.rs:267)
+    n1: 0 0x10F607: std::rt::lang_start (rt.rs:64)
+     n0: 0 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+#-----------
+snapshot=2
+#-----------
+time=1243713
+mem_heap_B=12877
+mem_heap_extra_B=67
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=1980237
+mem_heap_B=25549
+mem_heap_extra_B=67
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=3451737
+mem_heap_B=50893
+mem_heap_extra_B=67
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=6393189
+mem_heap_B=101581
+mem_heap_extra_B=67
+mem_stacks_B=0
+heap_tree=detailed
+n8: 101581 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 101381 0x10DF70: std::sys::unix::alloc::<impl core::alloc::GlobalAlloc for std::alloc::System>::realloc (alloc.rs:44)
+  n2: 101381 0x10C7EC: __rg_realloc (main.rs:4)
+   n1: 101376 0x10DD6B: alloc::alloc::realloc (alloc.rs:111)
+    n1: 101376 0x10DC23: <alloc::alloc::Global as core::alloc::Alloc>::realloc (alloc.rs:166)
+     n1: 101376 0x10ECC6: <alloc::raw_vec::RawVec<T, A>>::reserve_internal (raw_vec.rs:666)
+      n1: 101376 0x10F0DF: <alloc::raw_vec::RawVec<T, A>>::reserve (raw_vec.rs:491)
+       n1: 101376 0x10D05F: <alloc::vec::Vec<T>>::reserve (vec.rs:457)
+        n1: 101376 0x10CF7E: <alloc::vec::Vec<T>>::push (vec.rs:1023)
+         n1: 101376 0x10C96A: example_massif::vect_alloc (main.rs:12)
+          n1: 101376 0x10CBA5: example_massif::main (main.rs:43)
+           n1: 101376 0x10F62E: std::rt::lang_start::{{closure}} (rt.rs:64)
+            n1: 101376 0x119A71: std::panicking::try::do_call (rt.rs:49)
+             n1: 101376 0x11B958: __rust_maybe_catch_panic (lib.rs:87)
+              n1: 101376 0x11A52B: std::rt::lang_start_internal (panicking.rs:276)
+               n1: 101376 0x10F607: std::rt::lang_start (rt.rs:64)
+                n0: 101376 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n1: 5 0x113673: std::ffi::c_str::CString::from_vec_unchecked (alloc.rs:111)
+    n1: 5 0x112DC2: std::thread::Thread::new (c_str.rs:328)
+     n1: 5 0x11A48D: std::rt::lang_start_internal (rt.rs:40)
+      n1: 5 0x10F607: std::rt::lang_start (rt.rs:64)
+       n0: 5 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 168 0x10DE95: std::sys::unix::alloc::<impl core::alloc::GlobalAlloc for std::alloc::System>::alloc (alloc.rs:11)
+  n5: 168 0x10C71B: __rg_alloc (main.rs:4)
+   n1: 80 0x112EE5: std::thread::Thread::new (alloc.rs:75)
+    n1: 80 0x11A48D: std::rt::lang_start_internal (rt.rs:40)
+     n1: 80 0x10F607: std::rt::lang_start (rt.rs:64)
+      n0: 80 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n1: 48 0x112E97: std::thread::Thread::new (alloc.rs:75)
+    n1: 48 0x11A48D: std::rt::lang_start_internal (rt.rs:40)
+     n1: 48 0x10F607: std::rt::lang_start (rt.rs:64)
+      n0: 48 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n1: 40 0x112E24: std::thread::Thread::new (alloc.rs:75)
+    n1: 40 0x11A48D: std::rt::lang_start_internal (rt.rs:40)
+     n1: 40 0x10F607: std::rt::lang_start (rt.rs:64)
+      n0: 40 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n1: 0 0x10DC9A: alloc::alloc::alloc (alloc.rs:75)
+    n1: 0 0x10DB70: <alloc::alloc::Global as core::alloc::Alloc>::alloc (alloc.rs:151)
+     n1: 0 0x10ECF0: <alloc::raw_vec::RawVec<T, A>>::reserve_internal (raw_vec.rs:668)
+      n1: 0 0x10F0DF: <alloc::raw_vec::RawVec<T, A>>::reserve (raw_vec.rs:491)
+       n1: 0 0x10D05F: <alloc::vec::Vec<T>>::reserve (vec.rs:457)
+        n1: 0 0x10D380: <alloc::vec::Vec<T> as alloc::vec::SpecExtend<T, I>>::spec_extend (vec.rs:1848)
+         n1: 0 0x10D582: <alloc::vec::Vec<T> as alloc::vec::SpecExtend<T, I>>::from_iter (vec.rs:1835)
+          n1: 0 0x10D630: <alloc::vec::Vec<T> as core::iter::traits::collect::FromIterator<T>>::from_iter (vec.rs:1721)
+           n1: 0 0x10D89F: core::iter::traits::iterator::Iterator::collect (iterator.rs:1465)
+            n1: 0 0x10C843: example_massif::vect_alloc (main.rs:9)
+             n1: 0 0x10CBA5: example_massif::main (main.rs:43)
+              n1: 0 0x10F62E: std::rt::lang_start::{{closure}} (rt.rs:64)
+               n1: 0 0x119A71: std::panicking::try::do_call (rt.rs:49)
+                n1: 0 0x11B958: __rust_maybe_catch_panic (lib.rs:87)
+                 n1: 0 0x11A52B: std::rt::lang_start_internal (panicking.rs:276)
+                  n1: 0 0x10F607: std::rt::lang_start (rt.rs:64)
+                   n0: 0 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n1: 0 0x11A450: std::rt::lang_start_internal (alloc.rs:75)
+    n1: 0 0x10F607: std::rt::lang_start (rt.rs:64)
+     n0: 0 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 32 0x56B97C0: __cxa_thread_atexit_impl (cxa_thread_atexit_impl.c:106)
+  n1: 32 0x1183EA: std::sys_common::thread_info::set (fast_thread_local.rs:29)
+   n1: 32 0x11A4B6: std::rt::lang_start_internal (rt.rs:41)
+    n1: 32 0x10F607: std::rt::lang_start (rt.rs:64)
+     n0: 32 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 0 0x5248513: pthread_getattr_np (pthread_getattr_np.c:176)
+  n1: 0 0x11A282: std::rt::lang_start_internal (thread.rs:267)
+   n1: 0 0x10F607: std::rt::lang_start (rt.rs:64)
+    n0: 0 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 0 0x56F418A: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 0 0x5704377: _IO_doallocbuf (genops.c:365)
+   n1: 0 0x5703252: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:495)
+    n1: 0 0x56F5D46: getdelim (iogetdelim.c:73)
+     n1: 0 0x5248661: pthread_getattr_np (pthread_getattr_np.c:118)
+      n1: 0 0x11A282: std::rt::lang_start_internal (thread.rs:267)
+       n1: 0 0x10F607: std::rt::lang_start (rt.rs:64)
+        n0: 0 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 0 0x56F4E48: fopen@@GLIBC_2.2.5 (iofopen.c:65)
+  n1: 0 0x52485B1: pthread_getattr_np (pthread_getattr_np.c:81)
+   n1: 0 0x11A282: std::rt::lang_start_internal (thread.rs:267)
+    n1: 0 0x10F607: std::rt::lang_start (rt.rs:64)
+     n0: 0 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 0 0x56F5B8A: getdelim (iogetdelim.c:62)
+  n1: 0 0x5248661: pthread_getattr_np (pthread_getattr_np.c:118)
+   n1: 0 0x11A282: std::rt::lang_start_internal (thread.rs:267)
+    n1: 0 0x10F607: std::rt::lang_start (rt.rs:64)
+     n0: 0 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 0 0x56F5BE6: getdelim (iogetdelim.c:102)
+  n1: 0 0x5248661: pthread_getattr_np (pthread_getattr_np.c:118)
+   n1: 0 0x11A282: std::rt::lang_start_internal (thread.rs:267)
+    n1: 0 0x10F607: std::rt::lang_start (rt.rs:64)
+     n0: 0 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+#-----------
+snapshot=6
+#-----------
+time=12274545
+mem_heap_B=202957
+mem_heap_extra_B=67
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=19922177
+mem_heap_B=203353
+mem_heap_extra_B=79
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=21393263
+mem_heap_B=228301
+mem_heap_extra_B=75
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=22864763
+mem_heap_B=253645
+mem_heap_extra_B=75
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=25806215
+mem_heap_B=304333
+mem_heap_extra_B=75
+mem_stacks_B=0
+heap_tree=detailed
+n8: 304333 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 304133 0x10DF70: std::sys::unix::alloc::<impl core::alloc::GlobalAlloc for std::alloc::System>::realloc (alloc.rs:44)
+  n2: 304133 0x10C7EC: __rg_realloc (main.rs:4)
+   n1: 304128 0x10DD6B: alloc::alloc::realloc (alloc.rs:111)
+    n1: 304128 0x10DC23: <alloc::alloc::Global as core::alloc::Alloc>::realloc (alloc.rs:166)
+     n1: 304128 0x10ECC6: <alloc::raw_vec::RawVec<T, A>>::reserve_internal (raw_vec.rs:666)
+      n1: 304128 0x10F0DF: <alloc::raw_vec::RawVec<T, A>>::reserve (raw_vec.rs:491)
+       n1: 304128 0x10D05F: <alloc::vec::Vec<T>>::reserve (vec.rs:457)
+        n1: 304128 0x10CF7E: <alloc::vec::Vec<T>>::push (vec.rs:1023)
+         n1: 304128 0x10C96A: example_massif::vect_alloc (main.rs:12)
+          n1: 304128 0x10CBA5: example_massif::main (main.rs:43)
+           n1: 304128 0x10F62E: std::rt::lang_start::{{closure}} (rt.rs:64)
+            n1: 304128 0x119A71: std::panicking::try::do_call (rt.rs:49)
+             n1: 304128 0x11B958: __rust_maybe_catch_panic (lib.rs:87)
+              n1: 304128 0x11A52B: std::rt::lang_start_internal (panicking.rs:276)
+               n1: 304128 0x10F607: std::rt::lang_start (rt.rs:64)
+                n0: 304128 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n1: 5 0x113673: std::ffi::c_str::CString::from_vec_unchecked (alloc.rs:111)
+    n1: 5 0x112DC2: std::thread::Thread::new (c_str.rs:328)
+     n1: 5 0x11A48D: std::rt::lang_start_internal (rt.rs:40)
+      n1: 5 0x10F607: std::rt::lang_start (rt.rs:64)
+       n0: 5 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 168 0x10DE95: std::sys::unix::alloc::<impl core::alloc::GlobalAlloc for std::alloc::System>::alloc (alloc.rs:11)
+  n5: 168 0x10C71B: __rg_alloc (main.rs:4)
+   n1: 80 0x112EE5: std::thread::Thread::new (alloc.rs:75)
+    n1: 80 0x11A48D: std::rt::lang_start_internal (rt.rs:40)
+     n1: 80 0x10F607: std::rt::lang_start (rt.rs:64)
+      n0: 80 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n1: 48 0x112E97: std::thread::Thread::new (alloc.rs:75)
+    n1: 48 0x11A48D: std::rt::lang_start_internal (rt.rs:40)
+     n1: 48 0x10F607: std::rt::lang_start (rt.rs:64)
+      n0: 48 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n1: 40 0x112E24: std::thread::Thread::new (alloc.rs:75)
+    n1: 40 0x11A48D: std::rt::lang_start_internal (rt.rs:40)
+     n1: 40 0x10F607: std::rt::lang_start (rt.rs:64)
+      n0: 40 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n1: 0 0x10DC9A: alloc::alloc::alloc (alloc.rs:75)
+    n1: 0 0x10DB70: <alloc::alloc::Global as core::alloc::Alloc>::alloc (alloc.rs:151)
+     n1: 0 0x10ECF0: <alloc::raw_vec::RawVec<T, A>>::reserve_internal (raw_vec.rs:668)
+      n1: 0 0x10F0DF: <alloc::raw_vec::RawVec<T, A>>::reserve (raw_vec.rs:491)
+       n1: 0 0x10D05F: <alloc::vec::Vec<T>>::reserve (vec.rs:457)
+        n1: 0 0x10D380: <alloc::vec::Vec<T> as alloc::vec::SpecExtend<T, I>>::spec_extend (vec.rs:1848)
+         n1: 0 0x10D582: <alloc::vec::Vec<T> as alloc::vec::SpecExtend<T, I>>::from_iter (vec.rs:1835)
+          n1: 0 0x10D630: <alloc::vec::Vec<T> as core::iter::traits::collect::FromIterator<T>>::from_iter (vec.rs:1721)
+           n1: 0 0x10D89F: core::iter::traits::iterator::Iterator::collect (iterator.rs:1465)
+            n1: 0 0x10C843: example_massif::vect_alloc (main.rs:9)
+             n1: 0 0x10CBA5: example_massif::main (main.rs:43)
+              n1: 0 0x10F62E: std::rt::lang_start::{{closure}} (rt.rs:64)
+               n1: 0 0x119A71: std::panicking::try::do_call (rt.rs:49)
+                n1: 0 0x11B958: __rust_maybe_catch_panic (lib.rs:87)
+                 n1: 0 0x11A52B: std::rt::lang_start_internal (panicking.rs:276)
+                  n1: 0 0x10F607: std::rt::lang_start (rt.rs:64)
+                   n0: 0 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n1: 0 0x11A450: std::rt::lang_start_internal (alloc.rs:75)
+    n1: 0 0x10F607: std::rt::lang_start (rt.rs:64)
+     n0: 0 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 32 0x56B97C0: __cxa_thread_atexit_impl (cxa_thread_atexit_impl.c:106)
+  n1: 32 0x1183EA: std::sys_common::thread_info::set (fast_thread_local.rs:29)
+   n1: 32 0x11A4B6: std::rt::lang_start_internal (rt.rs:41)
+    n1: 32 0x10F607: std::rt::lang_start (rt.rs:64)
+     n0: 32 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 0 0x5248513: pthread_getattr_np (pthread_getattr_np.c:176)
+  n1: 0 0x11A282: std::rt::lang_start_internal (thread.rs:267)
+   n1: 0 0x10F607: std::rt::lang_start (rt.rs:64)
+    n0: 0 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 0 0x56F418A: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 0 0x5704377: _IO_doallocbuf (genops.c:365)
+   n1: 0 0x5703252: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:495)
+    n1: 0 0x56F5D46: getdelim (iogetdelim.c:73)
+     n1: 0 0x5248661: pthread_getattr_np (pthread_getattr_np.c:118)
+      n1: 0 0x11A282: std::rt::lang_start_internal (thread.rs:267)
+       n1: 0 0x10F607: std::rt::lang_start (rt.rs:64)
+        n0: 0 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 0 0x56F4E48: fopen@@GLIBC_2.2.5 (iofopen.c:65)
+  n1: 0 0x52485B1: pthread_getattr_np (pthread_getattr_np.c:81)
+   n1: 0 0x11A282: std::rt::lang_start_internal (thread.rs:267)
+    n1: 0 0x10F607: std::rt::lang_start (rt.rs:64)
+     n0: 0 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 0 0x56F5B8A: getdelim (iogetdelim.c:62)
+  n1: 0 0x5248661: pthread_getattr_np (pthread_getattr_np.c:118)
+   n1: 0 0x11A282: std::rt::lang_start_internal (thread.rs:267)
+    n1: 0 0x10F607: std::rt::lang_start (rt.rs:64)
+     n0: 0 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 0 0x56F5BE6: getdelim (iogetdelim.c:102)
+  n1: 0 0x5248661: pthread_getattr_np (pthread_getattr_np.c:118)
+   n1: 0 0x11A282: std::rt::lang_start_internal (thread.rs:267)
+    n1: 0 0x10F607: std::rt::lang_start (rt.rs:64)
+     n0: 0 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+#-----------
+snapshot=11
+#-----------
+time=31687571
+mem_heap_B=405709
+mem_heap_extra_B=75
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=39335203
+mem_heap_B=406105
+mem_heap_extra_B=87
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=40069765
+mem_heap_B=418381
+mem_heap_extra_B=83
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=40806289
+mem_heap_B=431053
+mem_heap_extra_B=83
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=42277789
+mem_heap_B=456397
+mem_heap_extra_B=83
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=45219241
+mem_heap_B=507085
+mem_heap_extra_B=83
+mem_stacks_B=0
+heap_tree=detailed
+n8: 507085 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 506885 0x10DF70: std::sys::unix::alloc::<impl core::alloc::GlobalAlloc for std::alloc::System>::realloc (alloc.rs:44)
+  n2: 506885 0x10C7EC: __rg_realloc (main.rs:4)
+   n1: 506880 0x10DD6B: alloc::alloc::realloc (alloc.rs:111)
+    n1: 506880 0x10DC23: <alloc::alloc::Global as core::alloc::Alloc>::realloc (alloc.rs:166)
+     n1: 506880 0x10ECC6: <alloc::raw_vec::RawVec<T, A>>::reserve_internal (raw_vec.rs:666)
+      n1: 506880 0x10F0DF: <alloc::raw_vec::RawVec<T, A>>::reserve (raw_vec.rs:491)
+       n1: 506880 0x10D05F: <alloc::vec::Vec<T>>::reserve (vec.rs:457)
+        n1: 506880 0x10CF7E: <alloc::vec::Vec<T>>::push (vec.rs:1023)
+         n1: 506880 0x10C96A: example_massif::vect_alloc (main.rs:12)
+          n1: 506880 0x10CBA5: example_massif::main (main.rs:43)
+           n1: 506880 0x10F62E: std::rt::lang_start::{{closure}} (rt.rs:64)
+            n1: 506880 0x119A71: std::panicking::try::do_call (rt.rs:49)
+             n1: 506880 0x11B958: __rust_maybe_catch_panic (lib.rs:87)
+              n1: 506880 0x11A52B: std::rt::lang_start_internal (panicking.rs:276)
+               n1: 506880 0x10F607: std::rt::lang_start (rt.rs:64)
+                n0: 506880 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n1: 5 0x113673: std::ffi::c_str::CString::from_vec_unchecked (alloc.rs:111)
+    n1: 5 0x112DC2: std::thread::Thread::new (c_str.rs:328)
+     n1: 5 0x11A48D: std::rt::lang_start_internal (rt.rs:40)
+      n1: 5 0x10F607: std::rt::lang_start (rt.rs:64)
+       n0: 5 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 168 0x10DE95: std::sys::unix::alloc::<impl core::alloc::GlobalAlloc for std::alloc::System>::alloc (alloc.rs:11)
+  n5: 168 0x10C71B: __rg_alloc (main.rs:4)
+   n1: 80 0x112EE5: std::thread::Thread::new (alloc.rs:75)
+    n1: 80 0x11A48D: std::rt::lang_start_internal (rt.rs:40)
+     n1: 80 0x10F607: std::rt::lang_start (rt.rs:64)
+      n0: 80 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n1: 48 0x112E97: std::thread::Thread::new (alloc.rs:75)
+    n1: 48 0x11A48D: std::rt::lang_start_internal (rt.rs:40)
+     n1: 48 0x10F607: std::rt::lang_start (rt.rs:64)
+      n0: 48 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n1: 40 0x112E24: std::thread::Thread::new (alloc.rs:75)
+    n1: 40 0x11A48D: std::rt::lang_start_internal (rt.rs:40)
+     n1: 40 0x10F607: std::rt::lang_start (rt.rs:64)
+      n0: 40 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n1: 0 0x10DC9A: alloc::alloc::alloc (alloc.rs:75)
+    n1: 0 0x10DB70: <alloc::alloc::Global as core::alloc::Alloc>::alloc (alloc.rs:151)
+     n1: 0 0x10ECF0: <alloc::raw_vec::RawVec<T, A>>::reserve_internal (raw_vec.rs:668)
+      n1: 0 0x10F0DF: <alloc::raw_vec::RawVec<T, A>>::reserve (raw_vec.rs:491)
+       n1: 0 0x10D05F: <alloc::vec::Vec<T>>::reserve (vec.rs:457)
+        n1: 0 0x10D380: <alloc::vec::Vec<T> as alloc::vec::SpecExtend<T, I>>::spec_extend (vec.rs:1848)
+         n1: 0 0x10D582: <alloc::vec::Vec<T> as alloc::vec::SpecExtend<T, I>>::from_iter (vec.rs:1835)
+          n1: 0 0x10D630: <alloc::vec::Vec<T> as core::iter::traits::collect::FromIterator<T>>::from_iter (vec.rs:1721)
+           n1: 0 0x10D89F: core::iter::traits::iterator::Iterator::collect (iterator.rs:1465)
+            n1: 0 0x10C843: example_massif::vect_alloc (main.rs:9)
+             n1: 0 0x10CBA5: example_massif::main (main.rs:43)
+              n1: 0 0x10F62E: std::rt::lang_start::{{closure}} (rt.rs:64)
+               n1: 0 0x119A71: std::panicking::try::do_call (rt.rs:49)
+                n1: 0 0x11B958: __rust_maybe_catch_panic (lib.rs:87)
+                 n1: 0 0x11A52B: std::rt::lang_start_internal (panicking.rs:276)
+                  n1: 0 0x10F607: std::rt::lang_start (rt.rs:64)
+                   n0: 0 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n1: 0 0x11A450: std::rt::lang_start_internal (alloc.rs:75)
+    n1: 0 0x10F607: std::rt::lang_start (rt.rs:64)
+     n0: 0 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 32 0x56B97C0: __cxa_thread_atexit_impl (cxa_thread_atexit_impl.c:106)
+  n1: 32 0x1183EA: std::sys_common::thread_info::set (fast_thread_local.rs:29)
+   n1: 32 0x11A4B6: std::rt::lang_start_internal (rt.rs:41)
+    n1: 32 0x10F607: std::rt::lang_start (rt.rs:64)
+     n0: 32 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 0 0x5248513: pthread_getattr_np (pthread_getattr_np.c:176)
+  n1: 0 0x11A282: std::rt::lang_start_internal (thread.rs:267)
+   n1: 0 0x10F607: std::rt::lang_start (rt.rs:64)
+    n0: 0 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 0 0x56F418A: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 0 0x5704377: _IO_doallocbuf (genops.c:365)
+   n1: 0 0x5703252: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:495)
+    n1: 0 0x56F5D46: getdelim (iogetdelim.c:73)
+     n1: 0 0x5248661: pthread_getattr_np (pthread_getattr_np.c:118)
+      n1: 0 0x11A282: std::rt::lang_start_internal (thread.rs:267)
+       n1: 0 0x10F607: std::rt::lang_start (rt.rs:64)
+        n0: 0 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 0 0x56F4E48: fopen@@GLIBC_2.2.5 (iofopen.c:65)
+  n1: 0 0x52485B1: pthread_getattr_np (pthread_getattr_np.c:81)
+   n1: 0 0x11A282: std::rt::lang_start_internal (thread.rs:267)
+    n1: 0 0x10F607: std::rt::lang_start (rt.rs:64)
+     n0: 0 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 0 0x56F5B8A: getdelim (iogetdelim.c:62)
+  n1: 0 0x5248661: pthread_getattr_np (pthread_getattr_np.c:118)
+   n1: 0 0x11A282: std::rt::lang_start_internal (thread.rs:267)
+    n1: 0 0x10F607: std::rt::lang_start (rt.rs:64)
+     n0: 0 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 0 0x56F5BE6: getdelim (iogetdelim.c:102)
+  n1: 0 0x5248661: pthread_getattr_np (pthread_getattr_np.c:118)
+   n1: 0 0x11A282: std::rt::lang_start_internal (thread.rs:267)
+    n1: 0 0x10F607: std::rt::lang_start (rt.rs:64)
+     n0: 0 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+#-----------
+snapshot=17
+#-----------
+time=51100597
+mem_heap_B=608461
+mem_heap_extra_B=83
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=58748229
+mem_heap_B=608857
+mem_heap_extra_B=95
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=59482791
+mem_heap_B=621133
+mem_heap_extra_B=91
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=60219315
+mem_heap_B=633805
+mem_heap_extra_B=91
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=61690815
+mem_heap_B=659149
+mem_heap_extra_B=91
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=64632267
+mem_heap_B=709837
+mem_heap_extra_B=91
+mem_stacks_B=0
+heap_tree=detailed
+n8: 709837 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 709637 0x10DF70: std::sys::unix::alloc::<impl core::alloc::GlobalAlloc for std::alloc::System>::realloc (alloc.rs:44)
+  n2: 709637 0x10C7EC: __rg_realloc (main.rs:4)
+   n1: 709632 0x10DD6B: alloc::alloc::realloc (alloc.rs:111)
+    n1: 709632 0x10DC23: <alloc::alloc::Global as core::alloc::Alloc>::realloc (alloc.rs:166)
+     n1: 709632 0x10ECC6: <alloc::raw_vec::RawVec<T, A>>::reserve_internal (raw_vec.rs:666)
+      n1: 709632 0x10F0DF: <alloc::raw_vec::RawVec<T, A>>::reserve (raw_vec.rs:491)
+       n1: 709632 0x10D05F: <alloc::vec::Vec<T>>::reserve (vec.rs:457)
+        n1: 709632 0x10CF7E: <alloc::vec::Vec<T>>::push (vec.rs:1023)
+         n1: 709632 0x10C96A: example_massif::vect_alloc (main.rs:12)
+          n1: 709632 0x10CBA5: example_massif::main (main.rs:43)
+           n1: 709632 0x10F62E: std::rt::lang_start::{{closure}} (rt.rs:64)
+            n1: 709632 0x119A71: std::panicking::try::do_call (rt.rs:49)
+             n1: 709632 0x11B958: __rust_maybe_catch_panic (lib.rs:87)
+              n1: 709632 0x11A52B: std::rt::lang_start_internal (panicking.rs:276)
+               n1: 709632 0x10F607: std::rt::lang_start (rt.rs:64)
+                n0: 709632 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n1: 5 0x113673: std::ffi::c_str::CString::from_vec_unchecked (alloc.rs:111)
+    n1: 5 0x112DC2: std::thread::Thread::new (c_str.rs:328)
+     n1: 5 0x11A48D: std::rt::lang_start_internal (rt.rs:40)
+      n1: 5 0x10F607: std::rt::lang_start (rt.rs:64)
+       n0: 5 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 168 0x10DE95: std::sys::unix::alloc::<impl core::alloc::GlobalAlloc for std::alloc::System>::alloc (alloc.rs:11)
+  n5: 168 0x10C71B: __rg_alloc (main.rs:4)
+   n1: 80 0x112EE5: std::thread::Thread::new (alloc.rs:75)
+    n1: 80 0x11A48D: std::rt::lang_start_internal (rt.rs:40)
+     n1: 80 0x10F607: std::rt::lang_start (rt.rs:64)
+      n0: 80 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n1: 48 0x112E97: std::thread::Thread::new (alloc.rs:75)
+    n1: 48 0x11A48D: std::rt::lang_start_internal (rt.rs:40)
+     n1: 48 0x10F607: std::rt::lang_start (rt.rs:64)
+      n0: 48 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n1: 40 0x112E24: std::thread::Thread::new (alloc.rs:75)
+    n1: 40 0x11A48D: std::rt::lang_start_internal (rt.rs:40)
+     n1: 40 0x10F607: std::rt::lang_start (rt.rs:64)
+      n0: 40 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n1: 0 0x10DC9A: alloc::alloc::alloc (alloc.rs:75)
+    n1: 0 0x10DB70: <alloc::alloc::Global as core::alloc::Alloc>::alloc (alloc.rs:151)
+     n1: 0 0x10ECF0: <alloc::raw_vec::RawVec<T, A>>::reserve_internal (raw_vec.rs:668)
+      n1: 0 0x10F0DF: <alloc::raw_vec::RawVec<T, A>>::reserve (raw_vec.rs:491)
+       n1: 0 0x10D05F: <alloc::vec::Vec<T>>::reserve (vec.rs:457)
+        n1: 0 0x10D380: <alloc::vec::Vec<T> as alloc::vec::SpecExtend<T, I>>::spec_extend (vec.rs:1848)
+         n1: 0 0x10D582: <alloc::vec::Vec<T> as alloc::vec::SpecExtend<T, I>>::from_iter (vec.rs:1835)
+          n1: 0 0x10D630: <alloc::vec::Vec<T> as core::iter::traits::collect::FromIterator<T>>::from_iter (vec.rs:1721)
+           n1: 0 0x10D89F: core::iter::traits::iterator::Iterator::collect (iterator.rs:1465)
+            n1: 0 0x10C843: example_massif::vect_alloc (main.rs:9)
+             n1: 0 0x10CBA5: example_massif::main (main.rs:43)
+              n1: 0 0x10F62E: std::rt::lang_start::{{closure}} (rt.rs:64)
+               n1: 0 0x119A71: std::panicking::try::do_call (rt.rs:49)
+                n1: 0 0x11B958: __rust_maybe_catch_panic (lib.rs:87)
+                 n1: 0 0x11A52B: std::rt::lang_start_internal (panicking.rs:276)
+                  n1: 0 0x10F607: std::rt::lang_start (rt.rs:64)
+                   n0: 0 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n1: 0 0x11A450: std::rt::lang_start_internal (alloc.rs:75)
+    n1: 0 0x10F607: std::rt::lang_start (rt.rs:64)
+     n0: 0 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 32 0x56B97C0: __cxa_thread_atexit_impl (cxa_thread_atexit_impl.c:106)
+  n1: 32 0x1183EA: std::sys_common::thread_info::set (fast_thread_local.rs:29)
+   n1: 32 0x11A4B6: std::rt::lang_start_internal (rt.rs:41)
+    n1: 32 0x10F607: std::rt::lang_start (rt.rs:64)
+     n0: 32 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 0 0x5248513: pthread_getattr_np (pthread_getattr_np.c:176)
+  n1: 0 0x11A282: std::rt::lang_start_internal (thread.rs:267)
+   n1: 0 0x10F607: std::rt::lang_start (rt.rs:64)
+    n0: 0 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 0 0x56F418A: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 0 0x5704377: _IO_doallocbuf (genops.c:365)
+   n1: 0 0x5703252: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:495)
+    n1: 0 0x56F5D46: getdelim (iogetdelim.c:73)
+     n1: 0 0x5248661: pthread_getattr_np (pthread_getattr_np.c:118)
+      n1: 0 0x11A282: std::rt::lang_start_internal (thread.rs:267)
+       n1: 0 0x10F607: std::rt::lang_start (rt.rs:64)
+        n0: 0 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 0 0x56F4E48: fopen@@GLIBC_2.2.5 (iofopen.c:65)
+  n1: 0 0x52485B1: pthread_getattr_np (pthread_getattr_np.c:81)
+   n1: 0 0x11A282: std::rt::lang_start_internal (thread.rs:267)
+    n1: 0 0x10F607: std::rt::lang_start (rt.rs:64)
+     n0: 0 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 0 0x56F5B8A: getdelim (iogetdelim.c:62)
+  n1: 0 0x5248661: pthread_getattr_np (pthread_getattr_np.c:118)
+   n1: 0 0x11A282: std::rt::lang_start_internal (thread.rs:267)
+    n1: 0 0x10F607: std::rt::lang_start (rt.rs:64)
+     n0: 0 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 0 0x56F5BE6: getdelim (iogetdelim.c:102)
+  n1: 0 0x5248661: pthread_getattr_np (pthread_getattr_np.c:118)
+   n1: 0 0x11A282: std::rt::lang_start_internal (thread.rs:267)
+    n1: 0 0x10F607: std::rt::lang_start (rt.rs:64)
+     n0: 0 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+#-----------
+snapshot=23
+#-----------
+time=70513623
+mem_heap_B=811213
+mem_heap_extra_B=91
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=78161255
+mem_heap_B=811609
+mem_heap_extra_B=103
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=78895817
+mem_heap_B=823885
+mem_heap_extra_B=99
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=79632341
+mem_heap_B=836557
+mem_heap_extra_B=99
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=81103841
+mem_heap_B=861901
+mem_heap_extra_B=99
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=84045293
+mem_heap_B=912589
+mem_heap_extra_B=99
+mem_stacks_B=0
+heap_tree=detailed
+n8: 912589 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 912389 0x10DF70: std::sys::unix::alloc::<impl core::alloc::GlobalAlloc for std::alloc::System>::realloc (alloc.rs:44)
+  n2: 912389 0x10C7EC: __rg_realloc (main.rs:4)
+   n1: 912384 0x10DD6B: alloc::alloc::realloc (alloc.rs:111)
+    n1: 912384 0x10DC23: <alloc::alloc::Global as core::alloc::Alloc>::realloc (alloc.rs:166)
+     n1: 912384 0x10ECC6: <alloc::raw_vec::RawVec<T, A>>::reserve_internal (raw_vec.rs:666)
+      n1: 912384 0x10F0DF: <alloc::raw_vec::RawVec<T, A>>::reserve (raw_vec.rs:491)
+       n1: 912384 0x10D05F: <alloc::vec::Vec<T>>::reserve (vec.rs:457)
+        n1: 912384 0x10CF7E: <alloc::vec::Vec<T>>::push (vec.rs:1023)
+         n1: 912384 0x10C96A: example_massif::vect_alloc (main.rs:12)
+          n1: 912384 0x10CBA5: example_massif::main (main.rs:43)
+           n1: 912384 0x10F62E: std::rt::lang_start::{{closure}} (rt.rs:64)
+            n1: 912384 0x119A71: std::panicking::try::do_call (rt.rs:49)
+             n1: 912384 0x11B958: __rust_maybe_catch_panic (lib.rs:87)
+              n1: 912384 0x11A52B: std::rt::lang_start_internal (panicking.rs:276)
+               n1: 912384 0x10F607: std::rt::lang_start (rt.rs:64)
+                n0: 912384 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n1: 5 0x113673: std::ffi::c_str::CString::from_vec_unchecked (alloc.rs:111)
+    n1: 5 0x112DC2: std::thread::Thread::new (c_str.rs:328)
+     n1: 5 0x11A48D: std::rt::lang_start_internal (rt.rs:40)
+      n1: 5 0x10F607: std::rt::lang_start (rt.rs:64)
+       n0: 5 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 168 0x10DE95: std::sys::unix::alloc::<impl core::alloc::GlobalAlloc for std::alloc::System>::alloc (alloc.rs:11)
+  n5: 168 0x10C71B: __rg_alloc (main.rs:4)
+   n1: 80 0x112EE5: std::thread::Thread::new (alloc.rs:75)
+    n1: 80 0x11A48D: std::rt::lang_start_internal (rt.rs:40)
+     n1: 80 0x10F607: std::rt::lang_start (rt.rs:64)
+      n0: 80 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n1: 48 0x112E97: std::thread::Thread::new (alloc.rs:75)
+    n1: 48 0x11A48D: std::rt::lang_start_internal (rt.rs:40)
+     n1: 48 0x10F607: std::rt::lang_start (rt.rs:64)
+      n0: 48 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n1: 40 0x112E24: std::thread::Thread::new (alloc.rs:75)
+    n1: 40 0x11A48D: std::rt::lang_start_internal (rt.rs:40)
+     n1: 40 0x10F607: std::rt::lang_start (rt.rs:64)
+      n0: 40 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n1: 0 0x10DC9A: alloc::alloc::alloc (alloc.rs:75)
+    n1: 0 0x10DB70: <alloc::alloc::Global as core::alloc::Alloc>::alloc (alloc.rs:151)
+     n1: 0 0x10ECF0: <alloc::raw_vec::RawVec<T, A>>::reserve_internal (raw_vec.rs:668)
+      n1: 0 0x10F0DF: <alloc::raw_vec::RawVec<T, A>>::reserve (raw_vec.rs:491)
+       n1: 0 0x10D05F: <alloc::vec::Vec<T>>::reserve (vec.rs:457)
+        n1: 0 0x10D380: <alloc::vec::Vec<T> as alloc::vec::SpecExtend<T, I>>::spec_extend (vec.rs:1848)
+         n1: 0 0x10D582: <alloc::vec::Vec<T> as alloc::vec::SpecExtend<T, I>>::from_iter (vec.rs:1835)
+          n1: 0 0x10D630: <alloc::vec::Vec<T> as core::iter::traits::collect::FromIterator<T>>::from_iter (vec.rs:1721)
+           n1: 0 0x10D89F: core::iter::traits::iterator::Iterator::collect (iterator.rs:1465)
+            n1: 0 0x10C843: example_massif::vect_alloc (main.rs:9)
+             n1: 0 0x10CBA5: example_massif::main (main.rs:43)
+              n1: 0 0x10F62E: std::rt::lang_start::{{closure}} (rt.rs:64)
+               n1: 0 0x119A71: std::panicking::try::do_call (rt.rs:49)
+                n1: 0 0x11B958: __rust_maybe_catch_panic (lib.rs:87)
+                 n1: 0 0x11A52B: std::rt::lang_start_internal (panicking.rs:276)
+                  n1: 0 0x10F607: std::rt::lang_start (rt.rs:64)
+                   n0: 0 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n1: 0 0x11A450: std::rt::lang_start_internal (alloc.rs:75)
+    n1: 0 0x10F607: std::rt::lang_start (rt.rs:64)
+     n0: 0 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 32 0x56B97C0: __cxa_thread_atexit_impl (cxa_thread_atexit_impl.c:106)
+  n1: 32 0x1183EA: std::sys_common::thread_info::set (fast_thread_local.rs:29)
+   n1: 32 0x11A4B6: std::rt::lang_start_internal (rt.rs:41)
+    n1: 32 0x10F607: std::rt::lang_start (rt.rs:64)
+     n0: 32 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 0 0x5248513: pthread_getattr_np (pthread_getattr_np.c:176)
+  n1: 0 0x11A282: std::rt::lang_start_internal (thread.rs:267)
+   n1: 0 0x10F607: std::rt::lang_start (rt.rs:64)
+    n0: 0 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 0 0x56F418A: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 0 0x5704377: _IO_doallocbuf (genops.c:365)
+   n1: 0 0x5703252: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:495)
+    n1: 0 0x56F5D46: getdelim (iogetdelim.c:73)
+     n1: 0 0x5248661: pthread_getattr_np (pthread_getattr_np.c:118)
+      n1: 0 0x11A282: std::rt::lang_start_internal (thread.rs:267)
+       n1: 0 0x10F607: std::rt::lang_start (rt.rs:64)
+        n0: 0 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 0 0x56F4E48: fopen@@GLIBC_2.2.5 (iofopen.c:65)
+  n1: 0 0x52485B1: pthread_getattr_np (pthread_getattr_np.c:81)
+   n1: 0 0x11A282: std::rt::lang_start_internal (thread.rs:267)
+    n1: 0 0x10F607: std::rt::lang_start (rt.rs:64)
+     n0: 0 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 0 0x56F5B8A: getdelim (iogetdelim.c:62)
+  n1: 0 0x5248661: pthread_getattr_np (pthread_getattr_np.c:118)
+   n1: 0 0x11A282: std::rt::lang_start_internal (thread.rs:267)
+    n1: 0 0x10F607: std::rt::lang_start (rt.rs:64)
+     n0: 0 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 0 0x56F5BE6: getdelim (iogetdelim.c:102)
+  n1: 0 0x5248661: pthread_getattr_np (pthread_getattr_np.c:118)
+   n1: 0 0x11A282: std::rt::lang_start_internal (thread.rs:267)
+    n1: 0 0x10F607: std::rt::lang_start (rt.rs:64)
+     n0: 0 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+#-----------
+snapshot=29
+#-----------
+time=89926649
+mem_heap_B=1013965
+mem_heap_extra_B=99
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=97574281
+mem_heap_B=1014361
+mem_heap_extra_B=111
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=98308843
+mem_heap_B=1026637
+mem_heap_extra_B=107
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=99045367
+mem_heap_B=1039309
+mem_heap_extra_B=107
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=100516867
+mem_heap_B=1064653
+mem_heap_extra_B=107
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=103458319
+mem_heap_B=1115341
+mem_heap_extra_B=107
+mem_stacks_B=0
+heap_tree=detailed
+n4: 1115341 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1115141 0x10DF70: std::sys::unix::alloc::<impl core::alloc::GlobalAlloc for std::alloc::System>::realloc (alloc.rs:44)
+  n2: 1115141 0x10C7EC: __rg_realloc (main.rs:4)
+   n1: 1115136 0x10DD6B: alloc::alloc::realloc (alloc.rs:111)
+    n1: 1115136 0x10DC23: <alloc::alloc::Global as core::alloc::Alloc>::realloc (alloc.rs:166)
+     n1: 1115136 0x10ECC6: <alloc::raw_vec::RawVec<T, A>>::reserve_internal (raw_vec.rs:666)
+      n1: 1115136 0x10F0DF: <alloc::raw_vec::RawVec<T, A>>::reserve (raw_vec.rs:491)
+       n1: 1115136 0x10D05F: <alloc::vec::Vec<T>>::reserve (vec.rs:457)
+        n1: 1115136 0x10CF7E: <alloc::vec::Vec<T>>::push (vec.rs:1023)
+         n1: 1115136 0x10C96A: example_massif::vect_alloc (main.rs:12)
+          n1: 1115136 0x10CBA5: example_massif::main (main.rs:43)
+           n1: 1115136 0x10F62E: std::rt::lang_start::{{closure}} (rt.rs:64)
+            n1: 1115136 0x119A71: std::panicking::try::do_call (rt.rs:49)
+             n1: 1115136 0x11B958: __rust_maybe_catch_panic (lib.rs:87)
+              n1: 1115136 0x11A52B: std::rt::lang_start_internal (panicking.rs:276)
+               n1: 1115136 0x10F607: std::rt::lang_start (rt.rs:64)
+                n0: 1115136 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n1: 5 0x113673: std::ffi::c_str::CString::from_vec_unchecked (alloc.rs:111)
+    n1: 5 0x112DC2: std::thread::Thread::new (c_str.rs:328)
+     n1: 5 0x11A48D: std::rt::lang_start_internal (rt.rs:40)
+      n1: 5 0x10F607: std::rt::lang_start (rt.rs:64)
+       n0: 5 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 168 0x10DE95: std::sys::unix::alloc::<impl core::alloc::GlobalAlloc for std::alloc::System>::alloc (alloc.rs:11)
+  n4: 168 0x10C71B: __rg_alloc (main.rs:4)
+   n1: 80 0x112EE5: std::thread::Thread::new (alloc.rs:75)
+    n1: 80 0x11A48D: std::rt::lang_start_internal (rt.rs:40)
+     n1: 80 0x10F607: std::rt::lang_start (rt.rs:64)
+      n0: 80 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n1: 48 0x112E97: std::thread::Thread::new (alloc.rs:75)
+    n1: 48 0x11A48D: std::rt::lang_start_internal (rt.rs:40)
+     n1: 48 0x10F607: std::rt::lang_start (rt.rs:64)
+      n0: 48 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n1: 40 0x112E24: std::thread::Thread::new (alloc.rs:75)
+    n1: 40 0x11A48D: std::rt::lang_start_internal (rt.rs:40)
+     n1: 40 0x10F607: std::rt::lang_start (rt.rs:64)
+      n0: 40 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n0: 0 in 2 places, all below massif's threshold (0.00%)
+ n1: 32 0x56B97C0: __cxa_thread_atexit_impl (cxa_thread_atexit_impl.c:106)
+  n1: 32 0x1183EA: std::sys_common::thread_info::set (fast_thread_local.rs:29)
+   n1: 32 0x11A4B6: std::rt::lang_start_internal (rt.rs:41)
+    n1: 32 0x10F607: std::rt::lang_start (rt.rs:64)
+     n0: 32 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n0: 0 in 5 places, all below massif's threshold (0.00%)
+#-----------
+snapshot=35
+#-----------
+time=109339675
+mem_heap_B=1216717
+mem_heap_extra_B=107
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=116987307
+mem_heap_B=1217113
+mem_heap_extra_B=119
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=117721869
+mem_heap_B=1229389
+mem_heap_extra_B=115
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=118458393
+mem_heap_B=1242061
+mem_heap_extra_B=115
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=119929893
+mem_heap_B=1267405
+mem_heap_extra_B=115
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=122871345
+mem_heap_B=1318093
+mem_heap_extra_B=115
+mem_stacks_B=0
+heap_tree=detailed
+n4: 1318093 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1317893 0x10DF70: std::sys::unix::alloc::<impl core::alloc::GlobalAlloc for std::alloc::System>::realloc (alloc.rs:44)
+  n2: 1317893 0x10C7EC: __rg_realloc (main.rs:4)
+   n1: 1317888 0x10DD6B: alloc::alloc::realloc (alloc.rs:111)
+    n1: 1317888 0x10DC23: <alloc::alloc::Global as core::alloc::Alloc>::realloc (alloc.rs:166)
+     n1: 1317888 0x10ECC6: <alloc::raw_vec::RawVec<T, A>>::reserve_internal (raw_vec.rs:666)
+      n1: 1317888 0x10F0DF: <alloc::raw_vec::RawVec<T, A>>::reserve (raw_vec.rs:491)
+       n1: 1317888 0x10D05F: <alloc::vec::Vec<T>>::reserve (vec.rs:457)
+        n1: 1317888 0x10CF7E: <alloc::vec::Vec<T>>::push (vec.rs:1023)
+         n1: 1317888 0x10C96A: example_massif::vect_alloc (main.rs:12)
+          n1: 1317888 0x10CBA5: example_massif::main (main.rs:43)
+           n1: 1317888 0x10F62E: std::rt::lang_start::{{closure}} (rt.rs:64)
+            n1: 1317888 0x119A71: std::panicking::try::do_call (rt.rs:49)
+             n1: 1317888 0x11B958: __rust_maybe_catch_panic (lib.rs:87)
+              n1: 1317888 0x11A52B: std::rt::lang_start_internal (panicking.rs:276)
+               n1: 1317888 0x10F607: std::rt::lang_start (rt.rs:64)
+                n0: 1317888 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n1: 5 0x113673: std::ffi::c_str::CString::from_vec_unchecked (alloc.rs:111)
+    n1: 5 0x112DC2: std::thread::Thread::new (c_str.rs:328)
+     n1: 5 0x11A48D: std::rt::lang_start_internal (rt.rs:40)
+      n1: 5 0x10F607: std::rt::lang_start (rt.rs:64)
+       n0: 5 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 168 0x10DE95: std::sys::unix::alloc::<impl core::alloc::GlobalAlloc for std::alloc::System>::alloc (alloc.rs:11)
+  n4: 168 0x10C71B: __rg_alloc (main.rs:4)
+   n1: 80 0x112EE5: std::thread::Thread::new (alloc.rs:75)
+    n1: 80 0x11A48D: std::rt::lang_start_internal (rt.rs:40)
+     n1: 80 0x10F607: std::rt::lang_start (rt.rs:64)
+      n0: 80 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n1: 48 0x112E97: std::thread::Thread::new (alloc.rs:75)
+    n1: 48 0x11A48D: std::rt::lang_start_internal (rt.rs:40)
+     n1: 48 0x10F607: std::rt::lang_start (rt.rs:64)
+      n0: 48 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n1: 40 0x112E24: std::thread::Thread::new (alloc.rs:75)
+    n1: 40 0x11A48D: std::rt::lang_start_internal (rt.rs:40)
+     n1: 40 0x10F607: std::rt::lang_start (rt.rs:64)
+      n0: 40 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n0: 0 in 2 places, all below massif's threshold (0.00%)
+ n1: 32 0x56B97C0: __cxa_thread_atexit_impl (cxa_thread_atexit_impl.c:106)
+  n1: 32 0x1183EA: std::sys_common::thread_info::set (fast_thread_local.rs:29)
+   n1: 32 0x11A4B6: std::rt::lang_start_internal (rt.rs:41)
+    n1: 32 0x10F607: std::rt::lang_start (rt.rs:64)
+     n0: 32 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n0: 0 in 5 places, all below massif's threshold (0.00%)
+#-----------
+snapshot=41
+#-----------
+time=128752701
+mem_heap_B=1419469
+mem_heap_extra_B=115
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=136400333
+mem_heap_B=1419865
+mem_heap_extra_B=127
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=137134895
+mem_heap_B=1432141
+mem_heap_extra_B=123
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=137871419
+mem_heap_B=1444813
+mem_heap_extra_B=123
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=139342919
+mem_heap_B=1470157
+mem_heap_extra_B=123
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=142284371
+mem_heap_B=1520845
+mem_heap_extra_B=123
+mem_stacks_B=0
+heap_tree=detailed
+n4: 1520845 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1520645 0x10DF70: std::sys::unix::alloc::<impl core::alloc::GlobalAlloc for std::alloc::System>::realloc (alloc.rs:44)
+  n2: 1520645 0x10C7EC: __rg_realloc (main.rs:4)
+   n1: 1520640 0x10DD6B: alloc::alloc::realloc (alloc.rs:111)
+    n1: 1520640 0x10DC23: <alloc::alloc::Global as core::alloc::Alloc>::realloc (alloc.rs:166)
+     n1: 1520640 0x10ECC6: <alloc::raw_vec::RawVec<T, A>>::reserve_internal (raw_vec.rs:666)
+      n1: 1520640 0x10F0DF: <alloc::raw_vec::RawVec<T, A>>::reserve (raw_vec.rs:491)
+       n1: 1520640 0x10D05F: <alloc::vec::Vec<T>>::reserve (vec.rs:457)
+        n1: 1520640 0x10CF7E: <alloc::vec::Vec<T>>::push (vec.rs:1023)
+         n1: 1520640 0x10C96A: example_massif::vect_alloc (main.rs:12)
+          n1: 1520640 0x10CBA5: example_massif::main (main.rs:43)
+           n1: 1520640 0x10F62E: std::rt::lang_start::{{closure}} (rt.rs:64)
+            n1: 1520640 0x119A71: std::panicking::try::do_call (rt.rs:49)
+             n1: 1520640 0x11B958: __rust_maybe_catch_panic (lib.rs:87)
+              n1: 1520640 0x11A52B: std::rt::lang_start_internal (panicking.rs:276)
+               n1: 1520640 0x10F607: std::rt::lang_start (rt.rs:64)
+                n0: 1520640 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n1: 5 0x113673: std::ffi::c_str::CString::from_vec_unchecked (alloc.rs:111)
+    n1: 5 0x112DC2: std::thread::Thread::new (c_str.rs:328)
+     n1: 5 0x11A48D: std::rt::lang_start_internal (rt.rs:40)
+      n1: 5 0x10F607: std::rt::lang_start (rt.rs:64)
+       n0: 5 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 168 0x10DE95: std::sys::unix::alloc::<impl core::alloc::GlobalAlloc for std::alloc::System>::alloc (alloc.rs:11)
+  n4: 168 0x10C71B: __rg_alloc (main.rs:4)
+   n1: 80 0x112EE5: std::thread::Thread::new (alloc.rs:75)
+    n1: 80 0x11A48D: std::rt::lang_start_internal (rt.rs:40)
+     n1: 80 0x10F607: std::rt::lang_start (rt.rs:64)
+      n0: 80 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n1: 48 0x112E97: std::thread::Thread::new (alloc.rs:75)
+    n1: 48 0x11A48D: std::rt::lang_start_internal (rt.rs:40)
+     n1: 48 0x10F607: std::rt::lang_start (rt.rs:64)
+      n0: 48 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n1: 40 0x112E24: std::thread::Thread::new (alloc.rs:75)
+    n1: 40 0x11A48D: std::rt::lang_start_internal (rt.rs:40)
+     n1: 40 0x10F607: std::rt::lang_start (rt.rs:64)
+      n0: 40 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n0: 0 in 2 places, all below massif's threshold (0.00%)
+ n1: 32 0x56B97C0: __cxa_thread_atexit_impl (cxa_thread_atexit_impl.c:106)
+  n1: 32 0x1183EA: std::sys_common::thread_info::set (fast_thread_local.rs:29)
+   n1: 32 0x11A4B6: std::rt::lang_start_internal (rt.rs:41)
+    n1: 32 0x10F607: std::rt::lang_start (rt.rs:64)
+     n0: 32 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n0: 0 in 5 places, all below massif's threshold (0.00%)
+#-----------
+snapshot=47
+#-----------
+time=148165727
+mem_heap_B=1622221
+mem_heap_extra_B=123
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=155813359
+mem_heap_B=1622617
+mem_heap_extra_B=135
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=155900173
+mem_heap_B=1623805
+mem_heap_extra_B=131
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=155993593
+mem_heap_B=1625389
+mem_heap_extra_B=131
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=156178885
+mem_heap_B=1628557
+mem_heap_extra_B=131
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=156547921
+mem_heap_B=1634893
+mem_heap_extra_B=131
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=157284445
+mem_heap_B=1647565
+mem_heap_extra_B=131
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=158755945
+mem_heap_B=1672909
+mem_heap_extra_B=131
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=161697397
+mem_heap_B=1723597
+mem_heap_extra_B=131
+mem_stacks_B=0
+heap_tree=detailed
+n4: 1723597 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1723397 0x10DF70: std::sys::unix::alloc::<impl core::alloc::GlobalAlloc for std::alloc::System>::realloc (alloc.rs:44)
+  n2: 1723397 0x10C7EC: __rg_realloc (main.rs:4)
+   n1: 1723392 0x10DD6B: alloc::alloc::realloc (alloc.rs:111)
+    n1: 1723392 0x10DC23: <alloc::alloc::Global as core::alloc::Alloc>::realloc (alloc.rs:166)
+     n1: 1723392 0x10ECC6: <alloc::raw_vec::RawVec<T, A>>::reserve_internal (raw_vec.rs:666)
+      n1: 1723392 0x10F0DF: <alloc::raw_vec::RawVec<T, A>>::reserve (raw_vec.rs:491)
+       n1: 1723392 0x10D05F: <alloc::vec::Vec<T>>::reserve (vec.rs:457)
+        n1: 1723392 0x10CF7E: <alloc::vec::Vec<T>>::push (vec.rs:1023)
+         n1: 1723392 0x10C96A: example_massif::vect_alloc (main.rs:12)
+          n1: 1723392 0x10CBA5: example_massif::main (main.rs:43)
+           n1: 1723392 0x10F62E: std::rt::lang_start::{{closure}} (rt.rs:64)
+            n1: 1723392 0x119A71: std::panicking::try::do_call (rt.rs:49)
+             n1: 1723392 0x11B958: __rust_maybe_catch_panic (lib.rs:87)
+              n1: 1723392 0x11A52B: std::rt::lang_start_internal (panicking.rs:276)
+               n1: 1723392 0x10F607: std::rt::lang_start (rt.rs:64)
+                n0: 1723392 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n1: 5 0x113673: std::ffi::c_str::CString::from_vec_unchecked (alloc.rs:111)
+    n1: 5 0x112DC2: std::thread::Thread::new (c_str.rs:328)
+     n1: 5 0x11A48D: std::rt::lang_start_internal (rt.rs:40)
+      n1: 5 0x10F607: std::rt::lang_start (rt.rs:64)
+       n0: 5 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 168 0x10DE95: std::sys::unix::alloc::<impl core::alloc::GlobalAlloc for std::alloc::System>::alloc (alloc.rs:11)
+  n4: 168 0x10C71B: __rg_alloc (main.rs:4)
+   n1: 80 0x112EE5: std::thread::Thread::new (alloc.rs:75)
+    n1: 80 0x11A48D: std::rt::lang_start_internal (rt.rs:40)
+     n1: 80 0x10F607: std::rt::lang_start (rt.rs:64)
+      n0: 80 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n1: 48 0x112E97: std::thread::Thread::new (alloc.rs:75)
+    n1: 48 0x11A48D: std::rt::lang_start_internal (rt.rs:40)
+     n1: 48 0x10F607: std::rt::lang_start (rt.rs:64)
+      n0: 48 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n1: 40 0x112E24: std::thread::Thread::new (alloc.rs:75)
+    n1: 40 0x11A48D: std::rt::lang_start_internal (rt.rs:40)
+     n1: 40 0x10F607: std::rt::lang_start (rt.rs:64)
+      n0: 40 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n0: 0 in 2 places, all below massif's threshold (0.00%)
+ n1: 32 0x56B97C0: __cxa_thread_atexit_impl (cxa_thread_atexit_impl.c:106)
+  n1: 32 0x1183EA: std::sys_common::thread_info::set (fast_thread_local.rs:29)
+   n1: 32 0x11A4B6: std::rt::lang_start_internal (rt.rs:41)
+    n1: 32 0x10F607: std::rt::lang_start (rt.rs:64)
+     n0: 32 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n0: 0 in 5 places, all below massif's threshold (0.00%)
+#-----------
+snapshot=56
+#-----------
+time=167578753
+mem_heap_B=1824973
+mem_heap_extra_B=131
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=175225748
+mem_heap_B=1824973
+mem_heap_extra_B=131
+mem_stacks_B=0
+heap_tree=peak
+n4: 1824973 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1824773 0x10DF70: std::sys::unix::alloc::<impl core::alloc::GlobalAlloc for std::alloc::System>::realloc (alloc.rs:44)
+  n2: 1824773 0x10C7EC: __rg_realloc (main.rs:4)
+   n1: 1824768 0x10DD6B: alloc::alloc::realloc (alloc.rs:111)
+    n1: 1824768 0x10DC23: <alloc::alloc::Global as core::alloc::Alloc>::realloc (alloc.rs:166)
+     n1: 1824768 0x10ECC6: <alloc::raw_vec::RawVec<T, A>>::reserve_internal (raw_vec.rs:666)
+      n1: 1824768 0x10F0DF: <alloc::raw_vec::RawVec<T, A>>::reserve (raw_vec.rs:491)
+       n1: 1824768 0x10D05F: <alloc::vec::Vec<T>>::reserve (vec.rs:457)
+        n1: 1824768 0x10CF7E: <alloc::vec::Vec<T>>::push (vec.rs:1023)
+         n1: 1824768 0x10C96A: example_massif::vect_alloc (main.rs:12)
+          n1: 1824768 0x10CBA5: example_massif::main (main.rs:43)
+           n1: 1824768 0x10F62E: std::rt::lang_start::{{closure}} (rt.rs:64)
+            n1: 1824768 0x119A71: std::panicking::try::do_call (rt.rs:49)
+             n1: 1824768 0x11B958: __rust_maybe_catch_panic (lib.rs:87)
+              n1: 1824768 0x11A52B: std::rt::lang_start_internal (panicking.rs:276)
+               n1: 1824768 0x10F607: std::rt::lang_start (rt.rs:64)
+                n0: 1824768 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n1: 5 0x113673: std::ffi::c_str::CString::from_vec_unchecked (alloc.rs:111)
+    n1: 5 0x112DC2: std::thread::Thread::new (c_str.rs:328)
+     n1: 5 0x11A48D: std::rt::lang_start_internal (rt.rs:40)
+      n1: 5 0x10F607: std::rt::lang_start (rt.rs:64)
+       n0: 5 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n1: 168 0x10DE95: std::sys::unix::alloc::<impl core::alloc::GlobalAlloc for std::alloc::System>::alloc (alloc.rs:11)
+  n4: 168 0x10C71B: __rg_alloc (main.rs:4)
+   n1: 80 0x112EE5: std::thread::Thread::new (alloc.rs:75)
+    n1: 80 0x11A48D: std::rt::lang_start_internal (rt.rs:40)
+     n1: 80 0x10F607: std::rt::lang_start (rt.rs:64)
+      n0: 80 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n1: 48 0x112E97: std::thread::Thread::new (alloc.rs:75)
+    n1: 48 0x11A48D: std::rt::lang_start_internal (rt.rs:40)
+     n1: 48 0x10F607: std::rt::lang_start (rt.rs:64)
+      n0: 48 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n1: 40 0x112E24: std::thread::Thread::new (alloc.rs:75)
+    n1: 40 0x11A48D: std::rt::lang_start_internal (rt.rs:40)
+     n1: 40 0x10F607: std::rt::lang_start (rt.rs:64)
+      n0: 40 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+   n0: 0 in 2 places, all below massif's threshold (0.00%)
+ n1: 32 0x56B97C0: __cxa_thread_atexit_impl (cxa_thread_atexit_impl.c:106)
+  n1: 32 0x1183EA: std::sys_common::thread_info::set (fast_thread_local.rs:29)
+   n1: 32 0x11A4B6: std::rt::lang_start_internal (rt.rs:41)
+    n1: 32 0x10F607: std::rt::lang_start (rt.rs:64)
+     n0: 32 0x10CC38: main (in /home/martina/prezentacia/performance_meetup/performance_meetup/target/debug/example_massif)
+ n0: 0 in 5 places, all below massif's threshold (0.00%)
