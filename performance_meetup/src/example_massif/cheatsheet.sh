@@ -8,7 +8,7 @@ rm "$LOG_PATH"
 
 #cargo build --release
 cargo build
-valgrind --tool=massif --threshold=0.0001   --massif-out-file="$OUT_PATH" ./target/debug/example_massif
+valgrind --tool=massif --threshold=0.0001 --massif-out-file="$OUT_PATH" ./target/debug/example_massif
 #valgrind --tool=massif --threshold=0.0001   --massif-out-file="$OUT_PATH" ./target/release/example_massif
 
 massif-visualizer "$OUT_PATH"
