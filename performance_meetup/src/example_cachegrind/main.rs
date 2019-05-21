@@ -12,7 +12,7 @@ pub fn syn_files() -> std::io::Result<()> {
     let mut f = File::create("foo.txt")?;
     for i in 1..1002 {
       f.write_all(b"Hello, world!")?; 
-     //  f.sync_all()?;
+      f.sync_all()?;
     }
     Ok(())
 }

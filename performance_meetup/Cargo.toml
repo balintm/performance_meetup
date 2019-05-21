@@ -39,10 +39,16 @@ path = "src/example_massif/main.rs"
 # The release profile, used for `cargo build --release` (and the dependencies
 # for `cargo test --release`, including the local library or binary).
 [profile.release]
-opt-level = 3
+opt-level = 3		# controls the `--opt-level` the compiler builds with.
+			# 0-1 is good for debugging. 2 is well-optimized. Max is 3.
+			# 's' attempts to reduce size, 'z' reduces size even more.
 debug = true
 rpath = false
-lto = false
+lto = false		# Link Time Optimization usually reduces size of binaries
+			# and static libraries. Increases compilation time.
+			# If true, passes `-C lto` flag to the compiler, and if a
+			# string is specified like 'thin' then `-C lto=thin` will
+			# be passed.
 debug-assertions = false
 codegen-units = 16
 panic = 'unwind'
@@ -50,5 +56,6 @@ incremental = false
 overflow-checks = false
 
 [profile.dev]
-opt-level = 3
-
+opt-level = 1
+lto = false
+debug = true 
