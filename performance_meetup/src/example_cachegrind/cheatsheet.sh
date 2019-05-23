@@ -1,6 +1,5 @@
 #!/bin/bash
 
-cd "/home/martina/prezentacia/performance_meetup/performance_meetup/"
 CACHEGRIND_PATH="src/example_cachegrind";
 OUT_PATH="$CACHEGRIND_PATH/out_cachegrind"
 LOG_PATH="$CACHEGRIND_PATH/log"
