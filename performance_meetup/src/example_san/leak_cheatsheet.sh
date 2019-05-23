@@ -1,6 +1,5 @@
 #!/bin/bash
 
-cd "/home/martina/prezentacia/performance_meetup/performance_meetup/"
 SAN_PATH="src/example_san/";
 LOG_PATH="$SAN_PATH/log_leak"
 rm "$LOG_PATH"
