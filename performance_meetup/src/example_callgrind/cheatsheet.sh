@@ -1,6 +1,5 @@
 #!/bin/bash
 
-cd "/home/martina/prezentacia/performance_meetup/performance_meetup/"
 CALLGRIND_PATH="src/example_callgrind";
 OUT_PATH="$CALLGRIND_PATH/out_callgrind"
 LOG_PATH="$CALLGRIND_PATH/log"
