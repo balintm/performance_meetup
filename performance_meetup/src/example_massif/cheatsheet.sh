@@ -1,6 +1,5 @@
 #!/bin/bash
 
-cd "/home/martina/prezentacia/performance_meetup/performance_meetup/"
 MASSIF_PATH="src/example_massif";
 OUT_PATH="$MASSIF_PATH/out_massif"
 LOG_PATH="$MASSIF_PATH/log"
